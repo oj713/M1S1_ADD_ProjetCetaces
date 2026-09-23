@@ -1,0 +1,542 @@
+# DONNEES ENTIEREMENT SIMULEES - generees a des fins pedagogiques (Master 1 Sciences de la Mer, Sorbonne Universite). Aucune valeur ne provient d'une mesure reelle. Les toponymes cites ne servent qu'a fixer une emprise geographique et un systeme de coordonnees plausibles.
+id;secteur;saison;espece_dominante;effort_km;etat_mer_beaufort;profondeur_m;distance_cote_km;sst_c;chlorophylle_mgm3;nb_groupes_observes;taille_groupe_moyenne;presence;lon;lat
+CET_0001;Canyon;Ete;Aucune;5.9;3;359;103.5;13.87;0.124;0;NA;0;-6.04321;47.86036
+CET_0002;Talus;Ete;Aucune;16;4;546;116.3;13.6;0.08;0;NA;0;-6.06716;47.56678
+CET_0003;Canyon;Automne;Cachalot;6.7;3;447;97.1;12.95;0.283;2;2.3;1;-2.4769;44.58569
+CET_0004;Canyon;Automne;Aucune;36.7;3;443;116;11.54;0.095;0;NA;0;-5.84505;47.35168
+CET_0005;Canyon;Ete;Dauphin commun;32.9;4;853;125.4;15.69;0.209;5;5.1;1;-2.96964;44.58033
+CET_0006;Talus;Printemps;Aucune;8.9;2;830;139.1;11.42;0.128;0;NA;0;-3.05845;45.54915
+CET_0007;Talus;Automne;Cachalot;37.2;4;1965;195;10.5;0.646;1;1.4;1;-8.98075;49.75649
+CET_0008;Plaine abyssale;Printemps;Dauphin commun;33.3;3;3289;252.9;10.84;0.08;1;12.1;1;-7.70092;47.03468
+CET_0009;Plaine abyssale;Ete;Globicephale;34.8;2;2805;255.3;14.93;0.08;1;7.7;1;-8.20563;48.25448
+CET_0010;Plaine abyssale;Hiver;Aucune;16;4;3015;223.9;10.5;0.206;0;NA;0;-8.55383;49.34029
+CET_0011;Canyon;Ete;Aucune;7.7;2;204;70.8;15.79;0.251;0;NA;0;-2.97652;44.08705
+CET_0012;Talus;Printemps;Rorqual commun;23.6;4;1113;154.6;11.26;0.094;3;3.1;1;-6.40223;47.27395
+CET_0013;Plateau;Hiver;Rorqual commun;27.6;2;160;53.8;10.5;1.132;1;2.1;1;-3.04959;43.92131
+CET_0014;Plaine abyssale;Ete;Globicephale;25.2;2;4338;251.9;14.35;0.1;5;2.5;1;-8.555;48.82094
+CET_0015;Canyon;Printemps;Cachalot;36.4;3;382;94.6;11.53;0.08;1;1;1;-5.00463;47.11221
+CET_0016;Plateau;Printemps;Aucune;17.4;4;194;55.5;11.08;0.136;0;NA;0;-2.47652;46.3434
+CET_0017;Canyon;Ete;Aucune;16.7;3;514;101.3;14.88;0.131;0;NA;0;-2.46425;45.31885
+CET_0018;Canyon;Printemps;Aucune;27.7;4;653;116.5;12.83;0.272;0;NA;0;-2.71801;44.6555
+CET_0019;Canyon;Printemps;Globicephale;29.9;5;246;78.3;12.28;0.285;2;5.3;1;-2.24818;44.51965
+CET_0020;Talus;Hiver;Globicephale;17.6;2;1617;170.3;10.5;0.101;2;7.2;1;-6.55218;47.17259
+CET_0021;Canyon;Printemps;Rorqual commun;23.2;3;792;138.1;10.88;0.136;1;3.7;1;-3.09655;45.66377
+CET_0022;Plateau;Ete;Rorqual commun;34.9;5;187;65.4;15.24;0.684;1;1;1;-3.35214;44.0858
+CET_0023;Plateau;Automne;Rorqual commun;38.3;3;168;63.2;12.06;0.508;2;1;1;-2.22371;43.91209
+CET_0024;Canyon;Hiver;Aucune;12.6;2;374;93.6;10.5;0.12;0;NA;0;-5.91595;47.89153
+CET_0025;Plateau;Printemps;Dauphin commun;28.8;2;104;17.1;11.46;0.095;1;8.3;1;-1.59275;43.92625
+CET_0026;Canyon;Automne;Dauphin commun;24.1;4;866;160.2;12.51;0.088;2;11.7;1;-3.24852;45.02126
+CET_0027;Plaine abyssale;Ete;Aucune;23.5;2;2091;202.2;14.07;0.459;0;NA;0;-7.98724;49.06783
+CET_0028;Plateau;Ete;Rorqual commun;36.7;2;146;47.4;16.14;0.271;7;2.5;1;-2.08644;43.78424
+CET_0029;Canyon;Ete;Aucune;7.6;3;1474;161.1;16.49;0.08;0;NA;0;-3.27845;44.94963
+CET_0030;Canyon;Ete;Globicephale;27.8;4;451;89.8;16.16;0.106;3;8.9;1;-2.46216;44.21609
+CET_0031;Talus;Printemps;Aucune;15.7;3;1716;178.7;11.43;0.08;0;NA;0;-7.14053;48.16616
+CET_0032;Talus;Printemps;Aucune;39.2;4;1518;173.1;10.5;0.08;0;NA;0;-6.83694;47.4755
+CET_0033;Plateau;Automne;Dauphin commun;9.6;2;114;22.5;11.51;0.209;2;3.4;1;-1.73807;46.25875
+CET_0034;Canyon;Hiver;Aucune;13.6;2;258;78.7;10.5;1.125;0;NA;0;-3.11074;44.15357
+CET_0035;Talus;Ete;Aucune;11.5;5;254;84.4;14.35;0.104;0;NA;0;-2.89824;46.3151
+CET_0036;Talus;Hiver;Aucune;13.9;3;645;129.3;10.5;0.08;0;NA;0;-6.43897;48.11786
+CET_0037;Plateau;Ete;Aucune;18.7;2;119;34.2;15.4;0.165;0;NA;0;-1.77059;44.06355
+CET_0038;Plateau;Automne;Dauphin commun;38.1;2;169;54.2;11.84;0.152;1;20.8;1;-2.75843;46.69238
+CET_0039;Plateau;Printemps;Aucune;16;4;84;12.5;11.05;0.125;0;NA;0;-1.32723;45.26725
+CET_0040;Plaine abyssale;Automne;Dauphin commun;21.3;4;2848;232.6;10.89;0.617;1;13.9;1;-8.6943;49.35943
+CET_0041;Plateau;Hiver;Aucune;33.3;4;138;50.1;10.5;0.146;0;NA;0;-5.32735;47.91789
+CET_0042;Canyon;Automne;Rorqual commun;5.9;2;456;98.6;11.93;1.209;1;1;1;-2.84481;44.34048
+CET_0043;Talus;Hiver;Aucune;12.9;2;350;92.7;10.5;0.349;0;NA;0;-2.34548;45.35293
+CET_0044;Canyon;Ete;Cachalot;29.8;0;865;132.7;14.71;0.099;14;1.5;1;-2.89458;45.05459
+CET_0045;Plateau;Ete;Dauphin commun;22.3;1;103;26.9;14.82;0.331;6;23.3;1;-2.02667;46.338
+CET_0046;Plaine abyssale;Hiver;Aucune;28.4;2;4800;303.5;10.5;0.08;0;NA;0;-9.23357;48.65589
+CET_0047;Talus;Automne;Globicephale;16.1;2;796;150.7;11.46;0.42;4;11.9;1;-3.67773;46.0403
+CET_0048;Plateau;Automne;Rorqual commun;23.9;2;143;32.4;11.26;0.142;1;2.7;1;-3.76863;47.50316
+CET_0049;Plateau;Printemps;Dauphin commun;6.5;5;75;1.2;12.59;0.419;1;37.2;1;-1.91461;43.3829
+CET_0050;Plaine abyssale;Ete;Dauphin commun;34.4;2;4089;250.4;13.37;0.08;6;14.9;1;-8.28272;48.61338
+CET_0051;Plaine abyssale;Hiver;Dauphin commun;33;2;4296;311.9;10.5;0.083;1;14.4;1;-9.31843;48.60301
+CET_0052;Talus;Ete;Dauphin commun;20.3;3;1770;176.5;14.18;0.116;17;15.8;1;-6.83673;47.39677
+CET_0053;Canyon;Printemps;Aucune;38;5;2030;170.6;10.98;0.124;0;NA;0;-6.06148;46.82287
+CET_0054;Plateau;Automne;Aucune;11.9;2;75;0.1;13.18;0.901;0;NA;0;-2.13136;43.33029
+CET_0055;Plaine abyssale;Automne;Aucune;13.5;2;3609;256.8;11.29;0.08;0;NA;0;-7.82113;47.12305
+CET_0056;Canyon;Ete;Globicephale;37.1;5;387;100.8;14.9;0.283;2;11.9;1;-2.55395;44.40485
+CET_0057;Canyon;Ete;Aucune;27.4;5;1357;165;14.9;0.098;0;NA;0;-4.06214;44.9784
+CET_0058;Talus;Printemps;Aucune;33.7;3;325;83.9;11.65;0.08;0;NA;0;-3.30878;46.7943
+CET_0059;Plateau;Ete;Globicephale;35.6;1;75;7.2;16.15;0.403;1;5.3;1;-1.62704;43.54181
+CET_0060;Talus;Ete;Aucune;13.5;0;588;122.2;14.84;0.11;0;NA;0;-5.58313;47.12523
+CET_0061;Canyon;Ete;Rorqual commun;25.2;3;1351;157.4;15.19;0.273;5;4.7;1;-5.82167;46.84439
+CET_0062;Plateau;Printemps;Rorqual commun;27.1;3;70;19;11.84;0.596;1;1.5;1;-3.06406;43.58816
+CET_0063;Canyon;Automne;Aucune;6.8;2;685;123.4;11.2;0.08;0;NA;0;-5.40046;46.99282
+CET_0064;Canyon;Hiver;Globicephale;23.6;2;615;122;10.5;0.08;1;6.3;1;-6.1026;47.50188
+CET_0065;Talus;Printemps;Globicephale;15.3;1;406;109;10.61;0.08;1;10.3;1;-3.22382;46.24576
+CET_0066;Plateau;Hiver;Aucune;11.6;1;75;3.1;10.5;0.655;0;NA;0;-2.20586;43.35064
+CET_0067;Plateau;Ete;Aucune;18.1;4;131;56.5;15.51;0.81;0;NA;0;-3.27383;43.98649
+CET_0068;Canyon;Automne;Aucune;29.2;2;218;63.6;12.92;0.445;0;NA;0;-2.12525;44.14976
+CET_0069;Canyon;Hiver;Cachalot;24.5;1;794;131.3;10.5;0.08;2;1.5;1;-4.61992;46.65962
+CET_0070;Canyon;Ete;Globicephale;39.4;2;534;119.4;14.83;0.123;1;3.2;1;-6.19106;47.68864
+CET_0071;Canyon;Printemps;Aucune;18.3;2;349;92.5;10.96;0.08;0;NA;0;-5.58647;47.47351
+CET_0072;Canyon;Automne;Aucune;5.6;3;1223;167.1;10.6;0.357;0;NA;0;-5.55079;46.57752
+CET_0073;Plaine abyssale;Hiver;Aucune;12.7;3;3968;289.4;10.5;0.096;0;NA;0;-9.36974;48.88174
+CET_0074;Canyon;Ete;Aucune;16;2;236;74.3;15.47;0.29;0;NA;0;-2.10343;45.50553
+CET_0075;Plaine abyssale;Ete;Globicephale;35.4;1;2951;260.1;13.09;0.089;2;6.6;1;-9.60195;49.13644
+CET_0076;Plaine abyssale;Automne;Aucune;17.2;4;2782;212.9;10.67;0.297;0;NA;0;-8.27647;49.19109
+CET_0077;Canyon;Hiver;Aucune;19.3;2;1738;179.6;10.5;0.192;0;NA;0;-6.94214;47.49709
+CET_0078;Talus;Ete;Aucune;15;2;265;77.1;14.98;0.086;0;NA;0;-2.37727;45.93536
+CET_0079;Plateau;Ete;Aucune;29.6;1;133;30.5;14.39;0.09;0;NA;0;-5.08121;47.9849
+CET_0080;Canyon;Printemps;Globicephale;19.1;2;221;65.8;11.86;0.223;1;12.4;1;-5.20967;47.56698
+CET_0081;Plateau;Hiver;Dauphin commun;39.8;4;72;23.1;10.5;0.253;1;16;1;-4.30394;47.60817
+CET_0082;Plaine abyssale;Ete;Dauphin commun;18.9;2;2218;214.8;14.06;0.506;3;19.1;1;-8.41359;49.33594
+CET_0083;Plateau;Hiver;Aucune;22.9;2;91;24.5;10.5;0.656;0;NA;0;-2.44652;43.60285
+CET_0084;Plateau;Hiver;Aucune;32.5;3;173;42.1;10.5;0.178;0;NA;0;-4.36778;47.44292
+CET_0085;Talus;Automne;Aucune;8;3;1065;153.3;11.53;0.133;0;NA;0;-3.25419;45.55618
+CET_0086;Talus;Printemps;Dauphin commun;23.1;2;748;134.6;10.5;0.191;2;17.1;1;-9.37072;50.28577
+CET_0087;Canyon;Automne;Aucune;16.3;2;253;82.7;12.22;0.877;0;NA;0;-2.29098;44.68171
+CET_0088;Canyon;Hiver;Aucune;15.9;4;566;115.6;10.5;0.417;0;NA;0;-3.00644;44.48964
+CET_0089;Canyon;Printemps;Aucune;37.5;0;552;119.8;11.26;0.114;0;NA;0;-5.90298;47.34572
+CET_0090;Canyon;Hiver;Aucune;31;3;232;66.8;10.5;0.246;0;NA;0;-2.05709;45.02357
+CET_0091;Canyon;Automne;Aucune;7.5;2;556;128.2;11.32;0.24;0;NA;0;-2.86486;44.72174
+CET_0092;Canyon;Printemps;Globicephale;34.9;3;257;89.9;12.1;0.334;1;9;1;-2.37237;44.80225
+CET_0093;Plaine abyssale;Printemps;Cachalot;13.4;1;2471;232.6;11.31;0.08;5;1.9;1;-7.48867;47.15358
+CET_0094;Plateau;Ete;Globicephale;23.2;2;194;48.2;14.89;0.141;2;17.9;1;-1.9383;44.11245
+CET_0095;Talus;Printemps;Aucune;18.9;3;219;61.7;10.98;0.109;0;NA;0;-2.43004;46.18275
+CET_0096;Canyon;Ete;Rorqual commun;22.8;2;617;121;13.71;0.156;2;3.1;1;-5.66316;47.17701
+CET_0097;Canyon;Ete;Globicephale;21.8;2;729;127.7;14.65;0.122;2;4.1;1;-2.9685;45.69257
+CET_0098;Canyon;Printemps;Aucune;16;3;2008;195.7;11.16;0.256;0;NA;0;-5.58723;46.29246
+CET_0099;Talus;Automne;Cachalot;27.7;0;428;99.1;12.03;0.194;2;1;1;-2.96896;46.14908
+CET_0100;Plaine abyssale;Automne;Cachalot;31.2;3;2181;212.9;11.8;0.183;1;5.4;1;-7.33823;47.35974
+CET_0101;Talus;Ete;Rorqual commun;24.3;1;582;115.1;13.12;0.08;5;2.8;1;-3.66521;46.64589
+CET_0102;Plateau;Automne;Rorqual commun;34.7;3;157;57.3;12.68;0.514;1;1;1;-1.89799;45.30608
+CET_0103;Plaine abyssale;Hiver;Aucune;18;1;2198;190.1;10.5;0.086;0;NA;0;-7.22115;47.88567
+CET_0104;Canyon;Hiver;Cachalot;7.1;3;1733;155.5;10.5;0.189;2;1.6;1;-3.29504;45.57972
+CET_0105;Canyon;Printemps;Rorqual commun;26.2;3;1071;156.5;11.28;0.101;3;1;1;-6.81879;48.1204
+CET_0106;Talus;Hiver;Aucune;19.1;3;991;137.9;10.5;0.254;0;NA;0;-3.47709;46.04663
+CET_0107;Plateau;Automne;Dauphin commun;23;3;196;61.6;12.29;0.375;1;10.3;1;-1.91828;45.48783
+CET_0108;Canyon;Hiver;Globicephale;10.2;1;310;85.6;10.5;0.191;2;6.5;1;-2.61238;44.20105
+CET_0109;Talus;Printemps;Rorqual commun;31.9;1;385;97.8;10.53;0.107;2;2.1;1;-2.81048;45.99367
+CET_0110;Canyon;Automne;Aucune;23.5;3;220;70.6;10.94;0.102;0;NA;0;-5.33595;47.58282
+CET_0111;Canyon;Ete;Globicephale;21.1;4;2260;199.5;15.01;0.143;1;14.8;1;-6.11481;45.42927
+CET_0112;Canyon;Hiver;Dauphin commun;20.1;2;365;89.1;10.5;0.093;1;18.7;1;-5.79081;47.74521
+CET_0113;Plateau;Automne;Dauphin commun;34.5;2;132;49.7;11.31;0.257;2;24.2;1;-2.03282;46.04513
+CET_0114;Talus;Printemps;Dauphin commun;37;2;551;119.5;11.32;0.099;3;23.1;1;-2.8745;45.73288
+CET_0115;Talus;Hiver;Dauphin commun;31.2;3;412;106.3;10.5;0.08;1;12;1;-3.41407;46.56006
+CET_0116;Plateau;Printemps;Aucune;7.3;2;123;38.4;11.18;0.255;0;NA;0;-2.28727;46.4251
+CET_0117;Plaine abyssale;Ete;Aucune;9.3;2;4634;226.4;14.74;0.206;0;NA;0;-8.23517;48.92085
+CET_0118;Canyon;Printemps;Cachalot;32.7;4;2432;218.1;11.97;0.13;1;2.2;1;-5.0403;45.92545
+CET_0119;Talus;Printemps;Aucune;19.5;3;1521;179.4;11.52;0.241;0;NA;0;-7.17669;48.79293
+CET_0120;Plateau;Printemps;Globicephale;37.9;5;86;21.1;12.55;0.579;1;5.8;1;-2.29595;43.52196
+CET_0121;Canyon;Ete;Aucune;15.5;3;1376;158.4;14.33;0.126;0;NA;0;-5.50812;46.65244
+CET_0122;Canyon;Ete;Aucune;14.5;1;254;79.9;14.15;1.024;0;NA;0;-2.96502;44.16987
+CET_0123;Canyon;Printemps;Rorqual commun;19.7;2;490;123.1;11.73;0.326;2;3.3;1;-3.09123;44.57388
+CET_0124;Canyon;Printemps;Aucune;9.4;3;233;78.7;12.74;0.246;0;NA;0;-2.68654;44.14929
+CET_0125;Plateau;Printemps;Aucune;37.8;4;167;59.7;12.1;0.426;0;NA;0;-2.97026;43.98718
+CET_0126;Talus;Ete;Aucune;7.6;3;1843;178.8;13.73;0.639;0;NA;0;-7.92407;49.41574
+CET_0127;Talus;Ete;Dauphin commun;33.4;3;285;76.6;15.39;0.313;1;12.2;1;-2.16667;45.18122
+CET_0128;Plaine abyssale;Printemps;Aucune;12.9;6;2941;229.3;10.61;0.202;0;NA;0;-8.3995;49.03672
+CET_0129;Canyon;Printemps;Aucune;18;2;678;134.6;11.76;0.08;0;NA;0;-5.59992;46.98265
+CET_0130;Canyon;Ete;Aucune;31;3;454;111.8;15.72;0.433;0;NA;0;-2.6487;44.82524
+CET_0131;Canyon;Automne;Aucune;11.9;2;424;103;12.95;0.592;0;NA;0;-2.71111;44.37333
+CET_0132;Canyon;Automne;Aucune;32.7;2;774;133.9;11.73;0.168;0;NA;0;-6.11948;47.32502
+CET_0133;Plateau;Printemps;Aucune;6.4;3;93;25.6;13.36;0.347;0;NA;0;-1.67921;44.00308
+CET_0134;Canyon;Ete;Globicephale;19.8;3;260;78.5;15.23;0.428;4;2.3;1;-2.23489;44.62017
+CET_0135;Talus;Printemps;Rorqual commun;14.6;2;1971;189;11.37;0.259;13;2.6;1;-7.31002;48.66182
+CET_0136;Canyon;Hiver;Aucune;23.6;2;330;85.6;10.5;0.478;0;NA;0;-2.46187;44.17747
+CET_0137;Canyon;Automne;Aucune;13.1;3;357;78.8;11.55;0.531;0;NA;0;-2.23005;44.8135
+CET_0138;Canyon;Ete;Cachalot;26.4;0;490;106;15.1;0.286;1;4.8;1;-3.18821;44.4335
+CET_0139;Plateau;Ete;Aucune;25.8;2;82;4;14.87;0.227;0;NA;0;-1.61958;43.5045
+CET_0140;Plateau;Ete;Rorqual commun;19.4;1;182;52.9;15.44;0.198;2;1;1;-2.06179;43.88791
+CET_0141;Talus;Printemps;Aucune;8.9;1;449;118.4;11.11;0.101;0;NA;0;-6.36472;48.39155
+CET_0142;Plateau;Hiver;Aucune;14.9;4;84;10.3;10.5;0.157;0;NA;0;-2.65671;47.34421
+CET_0143;Canyon;Printemps;Rorqual commun;12.2;1;226;66.9;11.18;0.273;3;3;1;-2.13605;44.33396
+CET_0144;Plateau;Hiver;Dauphin commun;11.7;2;155;53.5;10.5;0.872;1;13.8;1;-3.55142;43.99938
+CET_0145;Canyon;Ete;Aucune;16.3;1;1458;162.4;14.12;0.107;0;NA;0;-6.11401;46.94764
+CET_0146;Talus;Automne;Dauphin commun;22.6;1;218;71.2;11.46;0.173;1;23.1;1;-2.99311;46.69153
+CET_0147;Talus;Printemps;Dauphin commun;28;2;248;78.1;11.8;0.241;2;9.7;1;-2.21859;45.59089
+CET_0148;Plaine abyssale;Automne;Cachalot;10.5;3;4276;268.2;10.5;0.145;2;2.8;1;-9.04728;49.08545
+CET_0149;Talus;Ete;Dauphin commun;12.1;2;1320;159.5;13.3;0.611;2;26.4;1;-7.87336;49.91678
+CET_0150;Plateau;Ete;Dauphin commun;28;1;187;47.2;14.89;0.121;1;7.4;1;-2.33388;46.3194
+CET_0151;Canyon;Ete;Aucune;38.5;3;227;67.8;16.11;0.57;0;NA;0;-2.28245;43.97551
+CET_0152;Talus;Automne;Rorqual commun;38.7;0;603;126.2;11.08;0.393;7;3.1;1;-6.43269;48.70814
+CET_0153;Plaine abyssale;Ete;Aucune;13;4;2204;196.8;13.12;0.473;0;NA;0;-8.267;49.53695
+CET_0154;Plateau;Hiver;Cachalot;38.9;2;94;27.2;10.5;0.158;4;3;1;-1.75787;43.80928
+CET_0155;Canyon;Printemps;Dauphin commun;33.9;3;225;79.4;12.35;0.08;1;9;1;-5.53896;47.6198
+CET_0156;Plaine abyssale;Hiver;Globicephale;30.7;1;3904;263.7;10.5;0.08;1;12.1;1;-8.33258;48.36039
+CET_0157;Plateau;Automne;Dauphin commun;25.2;2;127;37.8;11.48;0.401;1;14.3;1;-1.70162;44.88378
+CET_0158;Plaine abyssale;Printemps;Aucune;27.6;2;2890;206.1;10.5;0.08;0;NA;0;-7.38523;47.6695
+CET_0159;Canyon;Automne;Aucune;9.8;1;207;71.8;12.38;0.768;0;NA;0;-2.30807;44.02168
+CET_0160;Plateau;Ete;Aucune;30.6;3;175;67.3;14.51;0.118;0;NA;0;-2.74939;46.43412
+CET_0161;Canyon;Printemps;Aucune;6.2;3;559;116.6;10.89;0.08;0;NA;0;-5.65577;47.22363
+CET_0162;Talus;Hiver;Dauphin commun;13.5;4;529;101.2;10.5;0.211;2;4.7;1;-2.8064;45.93972
+CET_0163;Plaine abyssale;Hiver;Rorqual commun;29.8;0;2260;186;10.5;0.209;2;3.2;1;-7.16117;47.85517
+CET_0164;Plateau;Ete;Aucune;23.1;2;143;46.3;15.41;0.429;0;NA;0;-1.86748;44.37644
+CET_0165;Canyon;Automne;Cachalot;26.1;3;490;115.9;11.72;0.08;2;1;1;-4.32161;46.76957
+CET_0166;Canyon;Automne;Cachalot;32.8;2;693;127.9;11.17;0.116;20;4.8;1;-5.75646;47.14804
+CET_0167;Talus;Automne;Aucune;10.4;4;1118;162.1;11.45;0.155;0;NA;0;-3.56265;45.73419
+CET_0168;Talus;Ete;Cachalot;37.3;2;299;94.7;14.54;0.12;4;2.8;1;-2.82765;46.05955
+CET_0169;Canyon;Hiver;Cachalot;35.5;2;790;128.6;10.5;0.205;2;2.1;1;-2.80831;45.35981
+CET_0170;Plaine abyssale;Automne;Aucune;13.7;3;4448;264.3;11.2;0.08;0;NA;0;-8.34734;48.47002
+CET_0171;Canyon;Ete;Cachalot;11.5;2;324;90;14.31;0.08;2;5.2;1;-5.36471;47.37447
+CET_0172;Plateau;Printemps;Aucune;13.8;3;156;36.7;10.5;0.341;0;NA;0;-5.12078;48.73796
+CET_0173;Talus;Ete;Rorqual commun;38.3;3;858;136.5;14.32;1.433;9;2.7;1;-7.405;49.59382
+CET_0174;Plaine abyssale;Ete;Aucune;10.9;2;4525;286.7;14.33;0.08;0;NA;0;-8.75159;48.47428
+CET_0175;Canyon;Automne;Aucune;6.6;1;859;137.2;10.9;0.42;0;NA;0;-2.97363;44.79294
+CET_0176;Canyon;Hiver;Cachalot;31.2;3;879;148.6;10.5;0.133;7;1.6;1;-5.65008;46.84081
+CET_0177;Canyon;Printemps;Aucune;32;3;398;102.5;10.52;0.08;0;NA;0;-5.95576;47.69986
+CET_0178;Canyon;Printemps;Globicephale;18;3;497;120;11.59;0.131;4;9.8;1;-2.73572;45.02422
+CET_0179;Plaine abyssale;Hiver;Globicephale;35.9;1;3739;345.4;10.5;0.08;2;3.4;1;-9.60773;48.34916
+CET_0180;Plateau;Automne;Aucune;30;3;71;9.8;12.25;1.031;0;NA;0;-3.26543;43.51089
+CET_0181;Plateau;Ete;Aucune;38.6;2;100;30.3;14.73;0.243;0;NA;0;-1.55428;45.27919
+CET_0182;Talus;Automne;Globicephale;37.1;3;265;72.5;11.15;0.287;2;4.3;1;-2.29879;45.87538
+CET_0183;Talus;Automne;Dauphin commun;13.3;3;1873;186.6;11.21;0.167;1;10.2;1;-7.06862;47.55118
+CET_0184;Canyon;Ete;Aucune;6.4;2;768;132.4;15.71;0.106;0;NA;0;-6.32615;47.59955
+CET_0185;Canyon;Ete;Cachalot;26.9;4;331;89.6;13.99;0.168;7;4.5;1;-5.87892;47.96963
+CET_0186;Canyon;Hiver;Aucune;9.3;3;210;67.5;10.5;0.318;0;NA;0;-2.04015;45.25827
+CET_0187;Canyon;Ete;Rorqual commun;11.1;2;281;92.4;13.09;0.144;1;1.8;1;-5.984;48.27017
+CET_0188;Plateau;Automne;Aucune;11.5;3;82;9.4;13.22;1.211;0;NA;0;-1.83729;43.48659
+CET_0189;Plateau;Printemps;Dauphin commun;11.3;3;162;53;12.46;0.191;1;15.7;1;-2.03028;43.99991
+CET_0190;Canyon;Hiver;Cachalot;8.7;3;495;119.6;10.5;0.08;2;1.4;1;-5.97435;47.40929
+CET_0191;Canyon;Printemps;Dauphin commun;35.3;3;301;85.7;11.91;0.14;2;16.5;1;-2.36828;44.37084
+CET_0192;Talus;Printemps;Aucune;9.5;2;417;101.4;12.46;0.139;0;NA;0;-2.65039;45.77897
+CET_0193;Talus;Printemps;Globicephale;7.4;4;312;75.6;11.15;0.096;1;11.4;1;-2.805;46.36147
+CET_0194;Plaine abyssale;Ete;Globicephale;14.5;3;2411;227.3;14.59;0.227;1;7.1;1;-8.01104;48.72343
+CET_0195;Talus;Ete;Cachalot;30.2;3;1467;163;13.73;0.098;2;1.9;1;-6.48577;47.22306
+CET_0196;Talus;Hiver;Globicephale;20.4;3;235;69.2;10.5;0.222;1;6.5;1;-2.04951;45.32018
+CET_0197;Canyon;Automne;Dauphin commun;8.5;2;253;80.8;11.34;0.575;1;20.8;1;-2.28639;44.48491
+CET_0198;Canyon;Automne;Dauphin commun;36;2;683;115.9;11.13;0.159;2;12.5;1;-5.79384;47.31669
+CET_0199;Plaine abyssale;Automne;Aucune;5.4;2;4423;249.9;11.4;0.08;0;NA;0;-7.87902;47.39492
+CET_0200;Talus;Ete;Aucune;8.7;3;446;120;15.01;0.08;0;NA;0;-6.1248;47.56824
+CET_0201;Canyon;Automne;Dauphin commun;33.1;0;219;73.4;11.96;0.255;1;9.6;1;-2.34249;45.97843
+CET_0202;Plaine abyssale;Automne;Rorqual commun;10;4;2284;214.9;10.5;0.295;1;2.3;1;-8.20692;49.07816
+CET_0203;Talus;Automne;Dauphin commun;31.2;2;302;84.5;11.42;0.115;7;9.2;1;-2.80307;46.21337
+CET_0204;Plateau;Hiver;Aucune;18.8;2;141;42.1;10.5;0.143;0;NA;0;-1.86311;44.1018
+CET_0205;Canyon;Hiver;Aucune;24.7;4;705;123.2;10.5;0.08;0;NA;0;-5.04367;46.8318
+CET_0206;Plaine abyssale;Automne;Aucune;9.3;1;2100;175.3;11.72;0.088;0;NA;0;-6.94359;47.62338
+CET_0207;Canyon;Ete;Aucune;19.2;3;782;142.3;15.04;0.08;0;NA;0;-4.49555;46.54268
+CET_0208;Canyon;Ete;Cachalot;30;3;238;80.4;15.65;0.538;3;1.1;1;-2.25737;44.73662
+CET_0209;Canyon;Hiver;Aucune;19.4;0;2381;221.8;10.5;0.394;0;NA;0;-5.69656;46.06576
+CET_0210;Talus;Printemps;Rorqual commun;37.4;4;1976;198.9;10.8;0.08;3;1.4;1;-7.07809;47.27215
+CET_0211;Talus;Ete;Dauphin commun;35.6;2;1812;164.7;14.13;0.086;1;20;1;-6.87867;47.88167
+CET_0212;Plateau;Printemps;Aucune;19.5;4;176;61.1;10.5;0.109;0;NA;0;-5.15692;47.59377
+CET_0213;Plateau;Ete;Rorqual commun;14.4;3;87;1.3;15.57;0.587;1;2.6;1;-2.32967;43.3396
+CET_0214;Plateau;Printemps;Dauphin commun;36.6;3;196;70;10.5;0.08;1;23.5;1;-5.61748;48.16003
+CET_0215;Canyon;Ete;Aucune;7.9;1;2238;189.7;15.29;0.429;0;NA;0;-5.95739;46.5348
+CET_0216;Plateau;Printemps;Dauphin commun;37.8;0;165;68.4;11.59;0.08;1;18.7;1;-4.85124;47.32731
+CET_0217;Plaine abyssale;Ete;Rorqual commun;37.9;6;3871;257;14.57;0.089;4;3.3;1;-7.3766;46.6259
+CET_0218;Plaine abyssale;Printemps;Cachalot;33.2;4;2680;242.5;12.12;0.195;3;3.7;1;-5.72974;45.82436
+CET_0219;Plateau;Hiver;Aucune;15.1;2;195;66.6;10.5;0.316;0;NA;0;-2.23033;43.94757
+CET_0220;Canyon;Automne;Aucune;28.9;1;483;110;11.63;0.136;0;NA;0;-5.3172;47.10435
+CET_0221;Canyon;Hiver;Aucune;28.3;4;2162;186.4;10.5;0.22;0;NA;0;-6.55744;46.94499
+CET_0222;Plateau;Printemps;Dauphin commun;33.1;2;160;46.3;11.54;0.232;2;20.7;1;-2.65492;46.70791
+CET_0223;Talus;Hiver;Globicephale;11.3;2;1875;197.8;10.5;0.212;1;4.1;1;-6.73871;46.93151
+CET_0224;Plaine abyssale;Ete;Aucune;15.7;5;4800;300.1;14.04;0.08;0;NA;0;-8.71117;47.86195
+CET_0225;Plateau;Ete;Dauphin commun;30.2;3;156;51.7;15.25;0.132;2;11.8;1;-2.03947;45.9261
+CET_0226;Canyon;Printemps;Globicephale;37.7;1;243;72.8;12.78;0.259;9;4.7;1;-2.36154;44.04265
+CET_0227;Plateau;Printemps;Aucune;21.1;2;150;38.2;11.84;0.267;0;NA;0;-2.00169;43.72096
+CET_0228;Canyon;Hiver;Aucune;16.3;5;350;97.6;10.5;0.151;0;NA;0;-5.97569;47.91064
+CET_0229;Plaine abyssale;Hiver;Globicephale;34.8;3;2108;202.3;10.5;0.08;3;8.2;1;-7.35073;47.72552
+CET_0230;Plaine abyssale;Ete;Cachalot;33.2;4;2724;227.9;15.49;0.118;2;3.8;1;-7.84823;48.37656
+CET_0231;Plaine abyssale;Hiver;Cachalot;33.9;1;4474;279.3;10.5;0.155;2;1.8;1;-8.54232;48.33938
+CET_0232;Canyon;Printemps;Aucune;5.8;3;2422;213.7;11.19;0.155;0;NA;0;-5.53095;45.55335
+CET_0233;Plateau;Ete;Rorqual commun;37.9;4;140;52.1;14.52;0.349;5;2.5;1;-2.8249;43.92153
+CET_0234;Plaine abyssale;Printemps;Cachalot;29.9;4;3739;259.4;10.5;0.08;1;4.2;1;-8.24977;48.19473
+CET_0235;Plaine abyssale;Automne;Aucune;29.3;1;2821;224.1;10.5;0.938;0;NA;0;-8.5584;49.34333
+CET_0236;Canyon;Automne;Aucune;27.7;2;658;122.5;11.65;0.539;0;NA;0;-2.77952;44.88438
+CET_0237;Canyon;Ete;Aucune;39.6;2;214;86.2;15.08;0.286;0;NA;0;-2.3038;45.02608
+CET_0238;Canyon;Hiver;Aucune;14.7;4;243;77;10.5;0.323;0;NA;0;-2.13584;45.4967
+CET_0239;Talus;Printemps;Aucune;31;2;1468;170.6;11.56;0.136;0;NA;0;-7.06926;48.35257
+CET_0240;Talus;Automne;Cachalot;24.9;3;1777;187.5;10.5;0.149;4;1.3;1;-7.10466;47.60453
+CET_0241;Plateau;Automne;Aucune;17.5;3;148;60.9;11.9;1.108;0;NA;0;-2.96766;43.99786
+CET_0242;Plaine abyssale;Printemps;Aucune;20.1;5;2169;204.1;11.8;0.142;0;NA;0;-7.52868;48.42243
+CET_0243;Plateau;Ete;Aucune;15.1;1;161;47.1;13.88;0.08;0;NA;0;-4.44806;47.40918
+CET_0244;Plateau;Automne;Dauphin commun;39.9;1;76;6.4;11.53;0.839;5;9.6;1;-2.80039;43.50155
+CET_0245;Canyon;Printemps;Globicephale;13.2;2;864;130.8;12.62;0.08;1;4.8;1;-2.83776;45.35493
+CET_0246;Talus;Hiver;Aucune;14;4;1024;130.6;10.5;0.08;0;NA;0;-6.39372;47.79592
+CET_0247;Talus;Automne;Dauphin commun;31.2;2;221;67.1;11.59;0.092;1;20.8;1;-2.53142;46.1984
+CET_0248;Plateau;Ete;Aucune;24.3;2;70;17.6;16.06;0.54;0;NA;0;-1.9013;43.55018
+CET_0249;Talus;Hiver;Rorqual commun;35;2;567;119.2;10.5;0.114;2;3;1;-2.85084;45.67967
+CET_0250;Canyon;Ete;Aucune;19.2;4;500;95.9;14.63;0.08;0;NA;0;-4.54073;46.97378
+CET_0251;Canyon;Ete;Aucune;15.9;1;1121;157.5;14.56;0.151;0;NA;0;-5.0111;46.48861
+CET_0252;Plateau;Printemps;Aucune;15.2;2;82;12.1;12.67;0.157;0;NA;0;-2.2257;46.80164
+CET_0253;Canyon;Printemps;Cachalot;33.6;3;824;141.7;11.96;0.08;1;3.1;1;-3.01185;45.02198
+CET_0254;Canyon;Printemps;Globicephale;31.3;0;456;112.3;10.5;0.08;3;3.6;1;-5.91134;47.46224
+CET_0255;Talus;Ete;Globicephale;14.6;0;280;82.5;14.68;0.138;2;7.2;1;-2.6488;46.0723
+CET_0256;Plateau;Printemps;Dauphin commun;39.3;1;182;43.8;12.7;0.251;2;13;1;-2.75706;43.83857
+CET_0257;Plaine abyssale;Printemps;Globicephale;26.1;3;3584;255;12.15;0.229;2;5.6;1;-6.81727;46.26574
+CET_0258;Plateau;Ete;Aucune;17.6;1;83;25.1;14.12;0.248;0;NA;0;-5.00189;48.10611
+CET_0259;Plaine abyssale;Hiver;Aucune;18.2;2;2366;201.6;10.5;0.129;0;NA;0;-7.36102;47.80158
+CET_0260;Canyon;Automne;Rorqual commun;37.8;3;358;91;11.46;0.517;1;3.1;1;-2.44339;44.32226
+CET_0261;Canyon;Ete;Dauphin commun;19.3;5;1560;177.9;14.34;0.087;2;16.5;1;-6.16164;46.79323
+CET_0262;Plaine abyssale;Automne;Aucune;35.4;4;2648;222.4;10.5;0.08;0;NA;0;-7.559;47.53311
+CET_0263;Plateau;Printemps;Aucune;6.7;4;89;1;11.65;0.371;0;NA;0;-1.30573;44.30327
+CET_0264;Plateau;Ete;Dauphin commun;36.4;1;99;13;15.73;1.05;6;4.7;1;-2.28501;43.44255
+CET_0265;Canyon;Printemps;Globicephale;12.3;3;223;61.9;11.98;0.08;1;1;1;-4.46544;47.27539
+CET_0266;Talus;Printemps;Cachalot;37.9;2;631;120.6;11.01;0.08;2;4.6;1;-3.45216;46.30149
+CET_0267;Talus;Printemps;Aucune;30.4;1;1623;166.8;12.32;0.118;0;NA;0;-3.41596;45.51204
+CET_0268;Plaine abyssale;Hiver;Cachalot;15.7;2;4381;299.8;10.5;0.08;3;3.6;1;-9.20338;48.68537
+CET_0269;Plateau;Ete;Aucune;25.2;4;181;60.2;15.24;0.154;0;NA;0;-2.09845;44.08253
+CET_0270;Plateau;Automne;Aucune;22.7;4;159;44.4;12.26;0.433;0;NA;0;-2.5542;46.59929
+CET_0271;Plateau;Ete;Aucune;33;3;184;69.1;15;0.918;0;NA;0;-2.11369;44.74443
+CET_0272;Plateau;Ete;Aucune;29.1;3;168;33.7;15.29;0.216;0;NA;0;-1.76967;44.04561
+CET_0273;Plateau;Hiver;Aucune;14.1;2;120;35.7;10.5;0.182;0;NA;0;-2.45901;46.64339
+CET_0274;Talus;Hiver;Rorqual commun;22;4;1227;158.4;10.5;0.08;1;1;1;-6.79455;47.8873
+CET_0275;Plaine abyssale;Ete;Rorqual commun;39.6;2;2648;207.7;15.01;0.16;4;2.2;1;-7.08412;47.11348
+CET_0276;Talus;Hiver;Dauphin commun;18.2;3;1966;191;10.5;0.179;2;25.9;1;-7.23878;47.91924
+CET_0277;Canyon;Ete;Dauphin commun;28.5;4;1716;188.8;14.25;0.104;13;8.1;1;-6.56075;46.91486
+CET_0278;Plateau;Automne;Dauphin commun;20.7;2;111;51.4;11.35;0.175;6;9.1;1;-1.8823;44.80636
+CET_0279;Canyon;Automne;Aucune;13.3;2;798;132.4;12.72;0.248;0;NA;0;-2.8618;45.34087
+CET_0280;Plaine abyssale;Automne;Aucune;31.3;3;2153;237;11.19;0.125;0;NA;0;-7.44399;47.0118
+CET_0281;Plateau;Ete;Dauphin commun;39.8;3;149;41;15.32;0.321;1;5.4;1;-2.42519;43.75747
+CET_0282;Canyon;Automne;Aucune;32.5;1;250;73.3;12.98;0.57;0;NA;0;-2.87611;44.11344
+CET_0283;Plaine abyssale;Printemps;Cachalot;14.4;2;3129;237.1;11.01;0.08;2;2.8;1;-7.66304;47.32452
+CET_0284;Talus;Printemps;Rorqual commun;15.9;1;1141;166.3;11.93;0.109;4;1.3;1;-3.32312;45.06349
+CET_0285;Talus;Automne;Rorqual commun;23.6;1;734;131.2;11.59;0.749;4;1.5;1;-6.4937;48.73651
+CET_0286;Plateau;Ete;Dauphin commun;33;2;114;7.8;15.1;0.474;2;11.9;1;-1.78401;43.48202
+CET_0287;Canyon;Ete;Globicephale;32.1;4;200;57.9;14.85;0.25;2;30.7;1;-2.81072;43.97344
+CET_0288;Plateau;Automne;Aucune;22.2;2;117;32;11.26;0.187;0;NA;0;-2.97608;47.26203
+CET_0289;Plateau;Automne;Aucune;39.2;3;126;41.5;12.81;0.538;0;NA;0;-2.06257;43.73373
+CET_0290;Plateau;Ete;Rorqual commun;18.5;4;114;42.5;15.85;0.112;1;2.9;1;-1.86866;44.09335
+CET_0291;Plateau;Automne;Aucune;16.6;4;87;14.9;12.37;1.134;0;NA;0;-2.07272;43.47163
+CET_0292;Plateau;Hiver;Aucune;25.6;1;100;20.7;10.5;0.391;0;NA;0;-1.99085;43.5516
+CET_0293;Plaine abyssale;Ete;Cachalot;36.5;2;4021;273.5;15;0.08;1;5.3;1;-8.158;47.28922
+CET_0294;Canyon;Printemps;Globicephale;33.4;3;810;126.9;13.23;0.08;3;6.3;1;-2.97543;45.72495
+CET_0295;Canyon;Printemps;Aucune;31.8;3;223;68.5;10.87;0.089;0;NA;0;-5.09589;47.49063
+CET_0296;Talus;Ete;Rorqual commun;24.7;2;690;127.3;15.35;0.095;1;6.8;1;-6.10437;47.41447
+CET_0297;Plateau;Automne;Aucune;13.2;2;134;29.6;12.94;0.52;0;NA;0;-2.87986;43.72094
+CET_0298;Canyon;Automne;Rorqual commun;22.2;6;2039;181.4;11.34;0.275;5;1;1;-6.10924;46.72653
+CET_0299;Plaine abyssale;Printemps;Rorqual commun;22;1;3211;250.2;11.96;0.208;1;1.7;1;-6.45701;46.1136
+CET_0300;Canyon;Printemps;Rorqual commun;20.5;1;1234;160.5;11.95;0.121;2;2.1;1;-3.23452;45.23965
+CET_0301;Plateau;Printemps;Dauphin commun;39.4;3;89;18.7;12.07;0.295;1;5.5;1;-2.11816;43.50079
+CET_0302;Plaine abyssale;Printemps;Rorqual commun;34.6;3;4082;271.6;12.39;0.08;3;3.7;1;-7.75887;46.76573
+CET_0303;Talus;Printemps;Rorqual commun;29.2;2;572;134.5;10.95;0.089;2;1.3;1;-6.49466;48.07721
+CET_0304;Plateau;Automne;Aucune;34.2;4;107;26.2;11.81;1.232;0;NA;0;-2.85459;43.68968
+CET_0305;Canyon;Automne;Globicephale;25.6;4;800;123.6;11.74;0.233;1;3.2;1;-6.02824;47.398
+CET_0306;Plateau;Hiver;Dauphin commun;37.8;3;144;39.2;10.5;0.22;2;1.1;1;-1.71159;44.96448
+CET_0307;Plaine abyssale;Hiver;Aucune;19.6;2;2172;193.3;10.5;0.81;0;NA;0;-7.43881;48.77581
+CET_0308;Plateau;Ete;Rorqual commun;31.5;4;67;3.9;14.57;0.48;1;1;1;-2.14288;46.858
+CET_0309;Plateau;Ete;Aucune;37.8;4;97;24.8;15.14;0.142;0;NA;0;-1.72346;43.81921
+CET_0310;Canyon;Ete;Aucune;21.1;3;1025;140.4;14.37;0.177;0;NA;0;-5.126;46.68735
+CET_0311;Plateau;Printemps;Aucune;29.1;4;191;65.5;11.18;0.08;0;NA;0;-4.81211;47.34046
+CET_0312;Canyon;Hiver;Aucune;7.1;3;1045;148.6;10.5;0.08;0;NA;0;-5.93486;47.00684
+CET_0313;Plateau;Ete;Dauphin commun;33.2;1;132;48.5;15.27;0.459;3;6.9;1;-2.12068;43.78336
+CET_0314;Canyon;Printemps;Dauphin commun;18;4;213;59.8;11.12;0.096;1;8;1;-5.46273;47.92038
+CET_0315;Talus;Ete;Rorqual commun;17.7;2;1938;225.2;14.31;0.098;1;1.9;1;-7.81547;48.43266
+CET_0316;Talus;Printemps;Aucune;13.4;5;338;107.3;12.03;0.08;0;NA;0;-3.38984;46.49251
+CET_0317;Canyon;Printemps;Dauphin commun;18.5;4;277;70.1;12.95;0.25;1;17.6;1;-2.10064;45.0132
+CET_0318;Plateau;Printemps;Aucune;15.5;3;74;14.9;11.69;0.201;0;NA;0;-1.61549;43.76126
+CET_0319;Canyon;Printemps;Cachalot;36.8;5;1067;161.1;11.55;0.08;5;2.2;1;-6.78574;47.72031
+CET_0320;Plateau;Ete;Dauphin commun;39.7;4;75;16.7;14.97;0.145;1;11.8;1;-1.54883;44.06088
+CET_0321;Talus;Hiver;Aucune;13.5;2;1557;185;10.5;0.134;0;NA;0;-3.55437;45.31054
+CET_0322;Plaine abyssale;Automne;Cachalot;21.2;4;3320;220.9;10.94;0.162;2;2.6;1;-7.25863;47.08291
+CET_0323;Canyon;Automne;Aucune;13.5;2;319;80.8;12.4;0.786;0;NA;0;-3.87135;44.22612
+CET_0324;Talus;Ete;Aucune;29.2;3;246;76.1;14.86;0.08;0;NA;0;-3.0543;46.68012
+CET_0325;Canyon;Printemps;Cachalot;11.6;2;436;100.7;12.24;0.136;1;1.2;1;-2.69101;44.35069
+CET_0326;Talus;Automne;Dauphin commun;29.3;5;1862;188;11.07;0.173;1;7.9;1;-7.22474;48.03784
+CET_0327;Plaine abyssale;Hiver;Aucune;31;3;4355;264.1;10.5;0.08;0;NA;0;-7.76285;46.90007
+CET_0328;Talus;Automne;Globicephale;24.9;3;1237;146.2;11.29;1.147;5;12.4;1;-8.46717;50.2803
+CET_0329;Plateau;Automne;Dauphin commun;24.1;2;94;24.7;12.41;0.641;1;10.1;1;-1.9591;43.60142
+CET_0330;Canyon;Ete;Aucune;10.2;1;2199;204.1;14.05;0.278;0;NA;0;-6.4412;46.64576
+CET_0331;Plateau;Ete;Aucune;10.8;3;126;40.7;15.13;0.351;0;NA;0;-2.5913;43.7846
+CET_0332;Plateau;Hiver;Aucune;7.1;3;124;48.1;10.5;0.383;0;NA;0;-2.29629;43.78689
+CET_0333;Canyon;Printemps;Aucune;38.7;3;541;112.3;11.07;0.091;0;NA;0;-5.72395;47.31496
+CET_0334;Talus;Printemps;Rorqual commun;32.5;2;1564;183.9;10.5;0.18;5;1;1;-8.66459;49.89371
+CET_0335;Plaine abyssale;Printemps;Cachalot;8;1;2876;208.5;10.81;0.375;1;1;1;-8.4217;49.50581
+CET_0336;Talus;Automne;Aucune;8.8;3;1535;172.1;10.77;0.231;0;NA;0;-6.95727;47.78944
+CET_0337;Canyon;Automne;Aucune;22;3;244;81.6;11.57;0.522;0;NA;0;-2.32637;44.3066
+CET_0338;Plaine abyssale;Ete;Aucune;8.7;3;4800;332.4;13.95;0.08;0;NA;0;-9.15779;47.86481
+CET_0339;Plaine abyssale;Ete;Aucune;12.3;4;2750;218.2;15.21;0.305;0;NA;0;-6.42869;45.56355
+CET_0340;Canyon;Automne;Globicephale;27.8;1;219;77.7;10.68;0.149;4;1.4;1;-5.6198;47.73828
+CET_0341;Canyon;Hiver;Aucune;28.6;3;266;79.1;10.5;0.093;0;NA;0;-3.08219;46.64883
+CET_0342;Plateau;Printemps;Aucune;17.7;3;74;6.5;10.75;0.132;0;NA;0;-2.3855;47.2234
+CET_0343;Canyon;Ete;Cachalot;37.2;3;905;151.3;16.05;0.261;5;7;1;-3.12665;45.11555
+CET_0344;Canyon;Hiver;Aucune;15.5;2;207;68.2;10.5;0.084;0;NA;0;-5.36399;47.63366
+CET_0345;Canyon;Ete;Aucune;39;4;249;80.5;15.87;0.114;0;NA;0;-5.10849;47.33808
+CET_0346;Talus;Ete;Aucune;10.9;3;1991;180.3;13.37;0.333;0;NA;0;-8.13824;49.80156
+CET_0347;Plaine abyssale;Printemps;Aucune;18.3;3;2512;180.4;11.37;0.08;0;NA;0;-6.9968;47.58314
+CET_0348;Talus;Automne;Aucune;14.3;3;243;69;12.4;0.181;0;NA;0;-2.5425;46.17854
+CET_0349;Talus;Hiver;Dauphin commun;31.7;0;896;160.8;10.5;0.194;2;5.8;1;-3.40884;45.60702
+CET_0350;Canyon;Printemps;Globicephale;29.3;2;1692;193;11.65;0.21;1;8.8;1;-5.68803;46.36193
+CET_0351;Plaine abyssale;Printemps;Cachalot;23.9;4;2140;197.3;12.04;0.08;1;1.2;1;-3.93549;45.5548
+CET_0352;Canyon;Automne;Aucune;10.1;1;1609;176.1;12.02;0.184;0;NA;0;-6.24558;46.86181
+CET_0353;Plateau;Ete;Aucune;29.6;3;73;1.4;16.23;0.247;0;NA;0;-1.73201;43.43171
+CET_0354;Canyon;Ete;Aucune;39.8;4;220;76.5;15.11;0.085;0;NA;0;-5.51306;47.64006
+CET_0355;Plateau;Printemps;Aucune;24.1;0;73;5;12.03;0.274;0;NA;0;-1.84435;43.44471
+CET_0356;Plateau;Printemps;Aucune;22.7;4;92;12.2;12.61;0.309;0;NA;0;-2.9552;43.55244
+CET_0357;Talus;Ete;Rorqual commun;36.6;3;671;117.2;15.69;0.138;2;1.7;1;-2.81444;45.65962
+CET_0358;Talus;Automne;Globicephale;39.3;1;1799;179.7;11.2;0.885;9;6.5;1;-7.89128;49.35591
+CET_0359;Plaine abyssale;Ete;Aucune;22.4;4;4175;286.7;14.58;0.084;0;NA;0;-9.2402;48.915
+CET_0360;Plaine abyssale;Automne;Cachalot;26.9;0;2389;193.8;10.5;0.777;9;2.7;1;-9.1079;49.75942
+CET_0361;Plaine abyssale;Hiver;Aucune;12.5;5;2906;241;10.5;0.08;0;NA;0;-7.79684;47.48756
+CET_0362;Canyon;Ete;Globicephale;12.7;1;947;147.7;14.53;0.293;1;9.8;1;-5.73359;46.90728
+CET_0363;Canyon;Hiver;Aucune;35.1;2;339;82.2;10.5;0.233;0;NA;0;-2.84807;44.19303
+CET_0364;Plateau;Automne;Aucune;15.1;4;173;45.9;11.81;0.256;0;NA;0;-1.80941;44.83774
+CET_0365;Plateau;Printemps;Aucune;23.1;3;81;9.9;13.18;0.747;0;NA;0;-2.19417;43.41237
+CET_0366;Canyon;Hiver;Aucune;16.9;3;402;104;10.5;0.13;0;NA;0;-5.61033;47.34593
+CET_0367;Plateau;Hiver;Dauphin commun;13.8;2;174;60.6;10.5;0.118;1;3.8;1;-1.95892;45.20931
+CET_0368;Plateau;Hiver;Aucune;8;3;160;56.8;10.5;0.156;0;NA;0;-2.11128;43.89082
+CET_0369;Plaine abyssale;Automne;Cachalot;17.2;3;2707;201;11.83;0.684;3;8.1;1;-8.29929;49.48389
+CET_0370;Canyon;Automne;Aucune;14.5;3;282;70.6;12.47;0.486;0;NA;0;-2.16681;44.4294
+CET_0371;Talus;Hiver;Rorqual commun;30;4;622;116;10.5;0.105;1;4.8;1;-2.93621;45.84093
+CET_0372;Canyon;Automne;Globicephale;7.6;1;243;79.4;12.33;0.521;3;3.9;1;-2.27893;44.42464
+CET_0373;Plateau;Hiver;Aucune;6.6;1;180;61.3;10.5;1.619;0;NA;0;-3.18318;44.00402
+CET_0374;Canyon;Ete;Rorqual commun;9.3;3;258;80.7;13.74;0.083;1;1.8;1;-4.74114;47.15799
+CET_0375;Plaine abyssale;Automne;Aucune;5.3;2;2995;223.3;11.2;0.324;0;NA;0;-5.40833;45.95982
+CET_0376;Plaine abyssale;Hiver;Aucune;25.2;2;2297;206;10.5;0.244;0;NA;0;-7.15092;47.2282
+CET_0377;Canyon;Printemps;Rorqual commun;34.8;2;1289;159.2;11.22;0.126;3;1.2;1;-6.08061;46.9658
+CET_0378;Plateau;Automne;Aucune;26.7;3;71;15.5;11.92;0.393;0;NA;0;-1.47673;44.37848
+CET_0379;Canyon;Printemps;Aucune;38.9;1;1099;151.6;11.06;0.08;0;NA;0;-5.14276;46.58134
+CET_0380;Plaine abyssale;Automne;Cachalot;21.2;2;2222;186.7;11.53;1.019;1;3.4;1;-7.70112;49.04836
+CET_0381;Plaine abyssale;Printemps;Aucune;27.8;2;4800;287.4;11.85;0.08;0;NA;0;-8.14011;46.93892
+CET_0382;Talus;Printemps;Dauphin commun;30.1;0;306;95.9;12.34;0.2;1;21;1;-2.37703;45.40499
+CET_0383;Canyon;Hiver;Aucune;9.8;4;730;132.3;10.5;0.08;0;NA;0;-5.14281;46.77525
+CET_0384;Talus;Automne;Rorqual commun;31.8;1;1814;176.6;11.23;0.183;7;1;1;-6.77052;47.30558
+CET_0385;Canyon;Ete;Aucune;8.6;3;609;126.7;14.02;0.08;0;NA;0;-6.0444;47.36534
+CET_0386;Canyon;Printemps;Aucune;35.1;4;1393;158.7;11.96;0.125;0;NA;0;-3.27813;45.45924
+CET_0387;Canyon;Hiver;Cachalot;31.9;1;1063;157.8;10.5;0.222;11;6.5;1;-6.5888;47.43527
+CET_0388;Canyon;Ete;Aucune;27.2;3;762;124.6;14.28;0.08;0;NA;0;-5.27968;46.91345
+CET_0389;Plateau;Printemps;Aucune;5.6;2;199;67.2;12.18;0.476;0;NA;0;-2.09515;44.68737
+CET_0390;Plaine abyssale;Ete;Cachalot;21.3;1;4365;292.2;14.4;0.08;7;4.5;1;-8.18006;46.89636
+CET_0391;Plateau;Ete;Dauphin commun;37.1;1;198;59.4;15.16;0.447;1;6.7;1;-2.14107;43.89985
+CET_0392;Canyon;Hiver;Globicephale;18.6;2;949;137.9;10.5;0.087;10;9.4;1;-5.2324;46.7515
+CET_0393;Talus;Ete;Globicephale;37;3;883;140.3;14.43;0.138;4;8.2;1;-6.54816;47.88299
+CET_0394;Canyon;Hiver;Aucune;16.7;1;213;58.8;10.5;0.251;0;NA;0;-2.60624;43.95336
+CET_0395;Plaine abyssale;Ete;Aucune;39.3;3;2261;189.7;14.07;0.102;0;NA;0;-7.1699;47.69665
+CET_0396;Plateau;Printemps;Dauphin commun;27.5;2;91;26.4;11.91;0.101;2;7.4;1;-2.16097;46.49057
+CET_0397;Canyon;Printemps;Aucune;10.8;4;267;83.5;10.53;0.337;0;NA;0;-2.57481;44.1764
+CET_0398;Plateau;Ete;Aucune;15.3;3;120;41.7;15.82;0.48;0;NA;0;-2.84576;43.82874
+CET_0399;Plateau;Hiver;Aucune;28;3;93;11.5;10.5;0.274;0;NA;0;-1.46554;44.16115
+CET_0400;Canyon;Ete;Globicephale;38.7;1;318;89.9;14.79;0.08;2;5.7;1;-5.18065;47.26654
+CET_0401;Plateau;Hiver;Aucune;5.7;3;181;57.5;10.5;0.426;0;NA;0;-2.78209;43.96736
+CET_0402;Talus;Automne;Aucune;7.2;2;648;116.4;11.95;0.239;0;NA;0;-2.81141;45.67726
+CET_0403;Plateau;Printemps;Aucune;12.5;2;96;32;11.81;0.201;0;NA;0;-1.82825;43.77796
+CET_0404;Plaine abyssale;Ete;Aucune;17.5;3;3497;300.4;13.35;0.14;0;NA;0;-9.64603;48.77272
+CET_0405;Plateau;Ete;Dauphin commun;8.3;3;157;57.2;14.36;0.182;1;9.9;1;-2.3571;46.18326
+CET_0406;Canyon;Ete;Aucune;7.5;3;737;135.9;14.39;0.08;0;NA;0;-6.49905;47.93662
+CET_0407;Plateau;Hiver;Aucune;23.9;3;161;53.3;10.5;0.343;0;NA;0;-2.63514;43.9071
+CET_0408;Canyon;Printemps;Aucune;29.6;1;615;121.2;11.68;0.08;0;NA;0;-4.88532;46.80472
+CET_0409;Plateau;Hiver;Rorqual commun;38.4;2;110;28.5;10.5;0.127;1;6;1;-1.47647;45.4814
+CET_0410;Canyon;Printemps;Rorqual commun;15.3;1;551;123.2;10.88;0.232;3;2.5;1;-2.79203;44.84233
+CET_0411;Plateau;Printemps;Aucune;40;3;147;52.8;11.84;0.116;0;NA;0;-2.83064;46.89313
+CET_0412;Plateau;Printemps;Aucune;35.1;5;118;30.9;10.69;0.086;0;NA;0;-2.74871;47.09
+CET_0413;Canyon;Automne;Aucune;9.3;1;263;87.2;11.64;0.445;0;NA;0;-2.31009;45.10383
+CET_0414;Canyon;Printemps;Globicephale;22.8;4;1227;156.2;11.81;0.121;9;7;1;-5.54519;46.69423
+CET_0415;Plateau;Hiver;Dauphin commun;20.5;5;118;33.5;10.5;0.392;2;5.1;1;-2.00531;43.67373
+CET_0416;Plateau;Ete;Cachalot;23.6;2;104;36;13.77;0.125;2;5.4;1;-5.02209;47.81106
+CET_0417;Plaine abyssale;Ete;Aucune;15.2;3;3382;262.6;14.89;0.08;0;NA;0;-8.40771;48.54159
+CET_0418;Canyon;Ete;Cachalot;29.5;3;1611;167.9;15.31;0.111;1;2.7;1;-6.34076;47.02846
+CET_0419;Canyon;Printemps;Dauphin commun;33;5;474;114.9;11.11;0.097;2;15.2;1;-6.26993;48.199
+CET_0420;Plateau;Automne;Aucune;25.2;3;151;47.1;11.59;0.3;0;NA;0;-1.73498;45.44444
+CET_0421;Plateau;Printemps;Globicephale;19.5;1;135;54.7;10.98;0.08;2;18.5;1;-2.03711;44.05027
+CET_0422;Canyon;Automne;Dauphin commun;23.1;2;290;83.4;11.27;0.315;3;3.7;1;-2.22272;45.36647
+CET_0423;Canyon;Printemps;Aucune;11.6;4;344;87.2;12.04;0.159;0;NA;0;-2.64762;44.22096
+CET_0424;Canyon;Printemps;Rorqual commun;28.8;3;968;158;12.3;0.134;3;2.3;1;-3.21194;45.1245
+CET_0425;Plaine abyssale;Ete;Aucune;26.8;2;2730;217.4;14.07;0.426;0;NA;0;-6.35579;46.44867
+CET_0426;Canyon;Printemps;Cachalot;27.3;1;269;73.7;11.19;0.183;1;5;1;-2.10158;45.52071
+CET_0427;Talus;Automne;Aucune;28.1;1;476;96.2;11.21;0.08;0;NA;0;-3.54736;46.81953
+CET_0428;Canyon;Ete;Cachalot;14.4;3;260;78.8;15.16;0.416;1;3.6;1;-2.46071;44.1149
+CET_0429;Plateau;Ete;Dauphin commun;18.2;2;110;29.6;15.65;0.684;1;23.7;1;-2.37976;43.63173
+CET_0430;Plateau;Printemps;Aucune;39.7;5;140;58.7;12.41;0.141;0;NA;0;-1.97876;45.65512
+CET_0431;Canyon;Automne;Cachalot;36.4;2;564;111.5;12.81;0.662;11;3.3;1;-2.67144;44.50958
+CET_0432;Talus;Ete;Dauphin commun;24.8;2;1216;164.1;13.7;0.393;4;25.1;1;-6.96348;48.68633
+CET_0433;Canyon;Printemps;Cachalot;27.9;4;302;93.3;10.5;0.08;4;2.8;1;-4.96794;47.11083
+CET_0434;Canyon;Printemps;Dauphin commun;39.9;1;634;128.6;11.91;0.08;4;15.6;1;-4.80609;46.71645
+CET_0435;Talus;Ete;Dauphin commun;32;1;435;99.2;14.61;0.311;7;7.3;1;-2.41208;45.4429
+CET_0436;Canyon;Ete;Dauphin commun;26;3;467;107.1;15.13;0.377;2;8.9;1;-2.61937;44.48915
+CET_0437;Plateau;Automne;Aucune;32.7;3;184;52.4;12.2;0.207;0;NA;0;-5.3837;48.19805
+CET_0438;Plaine abyssale;Automne;Aucune;7.1;4;2234;209.3;11.66;0.2;0;NA;0;-7.31658;47.41072
+CET_0439;Talus;Ete;Dauphin commun;33.3;2;792;146.4;12.83;0.08;3;11.9;1;-6.64009;47.94061
+CET_0440;Plaine abyssale;Printemps;Globicephale;11.1;0;3162;243.5;11.37;0.398;1;1.7;1;-5.78;45.83455
+CET_0441;Plateau;Printemps;Aucune;16.3;4;126;38.4;12.64;0.377;0;NA;0;-2.88497;43.79998
+CET_0442;Plateau;Ete;Aucune;22.7;1;94;15;14.66;0.08;0;NA;0;-1.56926;43.91601
+CET_0443;Canyon;Printemps;Cachalot;32.5;5;431;103.2;11.32;0.363;1;1.3;1;-2.52838;44.95257
+CET_0444;Plateau;Hiver;Aucune;25.9;2;80;24.2;10.5;0.431;0;NA;0;-2.68681;43.64768
+CET_0445;Canyon;Automne;Aucune;16.4;5;547;106.3;11.68;0.266;0;NA;0;-2.63315;44.3942
+CET_0446;Plateau;Ete;Aucune;15.1;3;193;61.2;15.72;0.363;0;NA;0;-1.92193;45.4362
+CET_0447;Canyon;Hiver;Aucune;10.6;5;261;72.6;10.5;0.305;0;NA;0;-2.2638;44.0572
+CET_0448;Plaine abyssale;Hiver;Rorqual commun;15.8;3;3271;269.6;10.5;0.08;2;3.3;1;-8.18322;47.46616
+CET_0449;Talus;Automne;Dauphin commun;19.9;4;1264;159.1;11.1;0.08;1;21.4;1;-6.81099;47.936
+CET_0450;Plateau;Hiver;Dauphin commun;16.1;5;161;64.4;10.5;0.137;1;8.7;1;-2.8612;46.62356
+CET_0451;Plaine abyssale;Ete;Aucune;28.6;5;3644;257.6;15.27;0.153;0;NA;0;-7.09898;46.4063
+CET_0452;Plaine abyssale;Hiver;Rorqual commun;18.8;1;3110;240.8;10.5;0.08;6;5.1;1;-7.90538;47.88493
+CET_0453;Canyon;Automne;Aucune;17.8;2;754;147.1;11.21;0.14;0;NA;0;-4.25804;44.79548
+CET_0454;Canyon;Printemps;Aucune;35.1;3;436;102.1;11.36;0.201;0;NA;0;-2.5094;45.00605
+CET_0455;Canyon;Printemps;Aucune;7.3;3;382;97.1;12.03;0.284;0;NA;0;-2.44789;44.97565
+CET_0456;Plateau;Hiver;Dauphin commun;20.3;0;146;50.2;10.5;0.162;1;36.6;1;-1.94785;44.19958
+CET_0457;Canyon;Printemps;Aucune;17.2;1;529;128;11.57;0.08;0;NA;0;-5.9649;47.28158
+CET_0458;Plateau;Printemps;Dauphin commun;39.5;1;117;26.1;12.53;0.308;8;18.8;1;-2.62727;43.65563
+CET_0459;Plaine abyssale;Printemps;Aucune;32.3;2;2465;211.1;11.66;0.08;0;NA;0;-7.00285;46.97239
+CET_0460;Canyon;Printemps;Cachalot;38.2;3;259;75.5;11.65;0.352;2;1;1;-2.19939;44.69444
+CET_0461;Talus;Printemps;Globicephale;21.2;1;326;84.6;12.08;0.198;1;6;1;-2.41079;45.74093
+CET_0462;Plaine abyssale;Printemps;Aucune;26.2;3;3956;246.4;10.8;0.08;0;NA;0;-7.7554;47.25528
+CET_0463;Plateau;Automne;Dauphin commun;12.3;3;185;57.7;11.18;0.314;1;13.7;1;-2.06421;44.08929
+CET_0464;Talus;Printemps;Aucune;37.9;3;215;60.8;10.5;0.08;0;NA;0;-3.15625;46.99293
+CET_0465;Plaine abyssale;Printemps;Dauphin commun;27.1;1;4800;261.9;10.71;0.107;6;23;1;-9.17319;49.14371
+CET_0466;Plateau;Printemps;Aucune;8.9;5;140;44.1;11.89;0.146;0;NA;0;-2.01488;46.14686
+CET_0467;Plateau;Hiver;Aucune;11.8;4;124;34.1;10.5;0.14;0;NA;0;-1.82718;45.99248
+CET_0468;Canyon;Ete;Cachalot;28;3;1529;185.2;15.44;0.255;14;3.1;1;-6.27787;46.7734
+CET_0469;Plaine abyssale;Ete;Aucune;11.8;2;2920;236.9;14.55;0.147;0;NA;0;-8.48623;48.99793
+CET_0470;Canyon;Ete;Rorqual commun;12.7;1;1633;186.1;14.22;0.083;3;4.8;1;-4.96908;46.21063
+CET_0471;Plateau;Hiver;Aucune;10.6;4;132;34.2;10.5;0.3;0;NA;0;-1.74782;44.18834
+CET_0472;Plateau;Printemps;Aucune;19.6;3;110;34.4;11.86;0.08;0;NA;0;-1.83395;46.03077
+CET_0473;Canyon;Hiver;Globicephale;23.9;3;1070;154.3;10.5;0.085;2;9;1;-5.82601;46.88846
+CET_0474;Canyon;Hiver;Aucune;15.4;4;297;83.8;10.5;0.457;0;NA;0;-2.35344;44.31618
+CET_0475;Plateau;Ete;Aucune;14.9;3;130;25.5;16.31;0.645;0;NA;0;-2.3946;43.59614
+CET_0476;Canyon;Ete;Dauphin commun;21.1;2;259;95.9;14.75;0.307;2;15;1;-2.36863;45.44982
+CET_0477;Plateau;Automne;Aucune;9.8;4;101;15.4;11.04;1.716;0;NA;0;-2.85066;43.59201
+CET_0478;Plateau;Automne;Dauphin commun;11.5;0;176;73.3;11.29;0.149;2;32.1;1;-2.95223;46.56731
+CET_0479;Canyon;Hiver;Aucune;35;1;336;91.6;10.5;0.395;0;NA;0;-2.38872;44.85301
+CET_0480;Canyon;Hiver;Aucune;34.7;3;252;69;10.5;0.133;0;NA;0;-2.18008;45.71165
+CET_0481;Plateau;Printemps;Aucune;39;3;81;7.5;11.17;0.124;0;NA;0;-4.6276;47.95154
+CET_0482;Canyon;Ete;Cachalot;8.5;1;236;68.5;15.86;0.367;1;3.2;1;-2.63272;44.04707
+CET_0483;Canyon;Ete;Globicephale;29.1;1;2233;192.5;14.24;0.542;1;8.6;1;-6.18802;46.64251
+CET_0484;Canyon;Hiver;Aucune;28.6;3;668;131.1;10.5;0.102;0;NA;0;-2.85993;45.21736
+CET_0485;Plateau;Printemps;Dauphin commun;19.9;2;71;8.7;12.37;0.119;1;12.1;1;-1.53099;43.77699
+CET_0486;Talus;Printemps;Aucune;19.9;4;551;118;10.54;0.08;0;NA;0;-6.2487;47.89486
+CET_0487;Plaine abyssale;Ete;Globicephale;16.5;3;4462;283.4;15.88;0.08;1;17;1;-8.50084;47.91542
+CET_0488;Canyon;Ete;Cachalot;23.4;1;1271;166.1;14.64;0.319;10;4.4;1;-5.90142;46.78833
+CET_0489;Plaine abyssale;Ete;Aucune;8.8;2;3344;252.8;12.98;0.164;0;NA;0;-8.79519;49.06606
+CET_0490;Talus;Automne;Dauphin commun;33.9;1;1155;154.8;10.5;1.889;6;5.4;1;-7.81862;49.99694
+CET_0491;Plateau;Hiver;Dauphin commun;17.4;3;81;14.5;10.5;0.121;1;16;1;-1.37524;45.15704
+CET_0492;Canyon;Printemps;Globicephale;22;2;428;106.4;12.03;0.347;1;4;1;-2.93428;44.41029
+CET_0493;Canyon;Hiver;Aucune;10.6;3;315;82.6;10.5;0.614;0;NA;0;-2.27667;44.83205
+CET_0494;Talus;Automne;Dauphin commun;6.1;2;575;123.8;11.88;0.232;2;12.3;1;-3.46277;46.25612
+CET_0495;Plaine abyssale;Ete;Aucune;37.7;4;4397;262.6;14.88;0.08;0;NA;0;-8.00795;47.29777
+CET_0496;Plateau;Printemps;Dauphin commun;14.9;2;182;66.6;11.08;0.08;3;9.6;1;-5.66406;48.41708
+CET_0497;Plateau;Ete;Aucune;13.2;2;178;41.3;15.04;0.088;0;NA;0;-2.13662;46.23228
+CET_0498;Plateau;Printemps;Aucune;29.4;3;188;68.7;12.08;0.384;0;NA;0;-2.96422;44.06905
+CET_0499;Plaine abyssale;Automne;Aucune;17;2;3588;316.3;10.5;0.08;0;NA;0;-8.76416;47.3146
+CET_0500;Plateau;Printemps;Aucune;37.9;0;85;7.9;12;0.445;0;NA;0;-1.40044;44.26473
+CET_0501;Plateau;Automne;Aucune;38.1;4;75;11;12.27;0.13;0;NA;0;-1.4878;44.01618
+CET_0502;Canyon;Ete;Globicephale;11.2;2;449;106.2;14.39;0.106;1;6;1;-5.72925;47.39715
+CET_0503;Plateau;Printemps;Aucune;10.8;2;90;23.2;11.61;0.094;0;NA;0;-1.64878;44.00037
+CET_0504;Canyon;Ete;Globicephale;38.8;3;263;78.1;15.75;0.398;2;2.2;1;-2.71002;44.14658
+CET_0505;Plaine abyssale;Automne;Aucune;9.6;2;3452;212.8;10.85;0.869;0;NA;0;-6.30449;46.47183
+CET_0506;Plaine abyssale;Ete;Rorqual commun;19.6;2;2259;215.1;13.83;0.08;3;1.7;1;-7.6372;48.15684
+CET_0507;Canyon;Ete;Cachalot;27.5;3;405;99.7;15.12;0.189;13;4;1;-2.53811;44.40987
+CET_0508;Canyon;Automne;Rorqual commun;13.4;2;381;96.3;12.66;0.447;1;1;1;-2.46879;44.56774
+CET_0509;Plaine abyssale;Automne;Aucune;28.9;3;2155;185.7;10.58;0.203;0;NA;0;-7.26223;48.27652
+CET_0510;Plateau;Automne;Dauphin commun;38.2;4;199;63.9;12.32;0.537;3;17.6;1;-2.5502;43.99164
+CET_0511;Canyon;Printemps;Aucune;20.5;3;449;99.8;11.4;0.324;0;NA;0;-2.48779;44.9176
+CET_0512;Plaine abyssale;Automne;Aucune;29.8;1;2555;207.4;11.47;0.581;0;NA;0;-6.06741;46.39015
+CET_0513;Plateau;Ete;Aucune;34.2;2;95;16.4;14.8;0.095;0;NA;0;-1.42999;44.87448
+CET_0514;Plaine abyssale;Ete;Aucune;10;4;2724;220.7;14.47;0.08;0;NA;0;-7.43603;47.33655
+CET_0515;Plaine abyssale;Hiver;Rorqual commun;17.6;1;2736;204.8;10.5;0.21;4;3.8;1;-7.53861;48.55334
+CET_0516;Plateau;Printemps;Aucune;27.8;1;188;48.6;10.5;0.08;0;NA;0;-5.24074;47.81776
+CET_0517;Canyon;Printemps;Aucune;30.7;3;370;98.8;11.45;0.091;0;NA;0;-2.53375;44.36702
+CET_0518;Canyon;Hiver;Dauphin commun;14;2;1313;175;10.5;0.13;1;4.9;1;-6.77496;47.34186
+CET_0519;Talus;Ete;Aucune;5.9;2;271;79;13.67;0.083;0;NA;0;-2.72428;46.2167
+CET_0520;Plateau;Hiver;Aucune;14.6;1;95;37.6;10.5;0.116;0;NA;0;-2.06679;46.23699
+CET_0521;Plateau;Hiver;Aucune;38;2;121;39.6;10.5;0.334;0;NA;0;-2.34202;43.71728
+CET_0522;Canyon;Printemps;Aucune;10.1;0;1025;144.3;10.94;0.08;0;NA;0;-4.68098;46.54876
+CET_0523;Plateau;Ete;Globicephale;35.3;2;143;41.1;15.31;0.112;3;3.8;1;-2.62077;46.78925
+CET_0524;Canyon;Ete;Aucune;37.6;4;427;108.3;14.67;0.29;0;NA;0;-2.54766;45.44674
+CET_0525;Talus;Printemps;Cachalot;19.7;2;720;131.7;11.33;0.11;1;1.6;1;-6.51092;48.22108
+CET_0526;Plateau;Automne;Aucune;11;4;149;38.7;10.82;0.177;0;NA;0;-5.24885;48.58666
+CET_0527;Canyon;Printemps;Cachalot;36.5;2;510;105.4;11.49;0.184;2;1;1;-2.55879;44.92078
+CET_0528;Plateau;Ete;Aucune;12.4;1;119;35.2;13.76;0.239;0;NA;0;-2.55468;46.88184
+CET_0529;Talus;Hiver;Rorqual commun;20.9;2;1966;201;10.5;0.105;6;1.2;1;-7.33643;47.73653
+CET_0530;Talus;Ete;Aucune;31.9;4;1986;190.7;13.86;0.295;0;NA;0;-7.34589;48.56602
+CET_0531;Talus;Ete;Rorqual commun;13.4;2;791;135.4;15.79;0.239;4;1.9;1;-6.32558;47.53039
+CET_0532;Plateau;Ete;Dauphin commun;20;2;87;8;15.54;0.526;1;10.4;1;-1.41569;44.18938
+CET_0533;Canyon;Ete;Cachalot;13.8;3;452;98.5;15.74;0.302;2;1.2;1;-2.44568;45.49928
+CET_0534;Canyon;Automne;Aucune;30.2;2;508;124.4;10.83;0.135;0;NA;0;-5.83196;47.23503
+CET_0535;Plateau;Automne;Aucune;19.7;1;105;26.4;10.77;0.209;0;NA;0;-2.06614;46.37621
+CET_0536;Plateau;Ete;Dauphin commun;10.5;3;122;30.8;15.99;0.464;2;28.6;1;-2.77614;43.72241
+CET_0537;Canyon;Ete;Aucune;6;4;709;134.9;13.37;0.08;0;NA;0;-5.62891;46.99927
+CET_0538;Canyon;Printemps;Rorqual commun;31.4;4;690;129.7;11.9;0.137;2;2;1;-2.99318;44.618
+CET_0539;Talus;Hiver;Rorqual commun;23.4;2;1514;174.5;10.5;0.08;3;3.5;1;-7.01981;47.9456
+CET_0540;Plateau;Ete;Aucune;11.3;1;125;43.9;14.9;0.081;0;NA;0;-2.50477;46.5599
