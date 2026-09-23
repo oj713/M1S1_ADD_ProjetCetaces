@@ -1,4 +1,5 @@
 .DS_store
+README.html
 
 # History files
 .Rhistory
@@ -22,6 +23,7 @@
 
 # RStudio files
 .Rproj.user/
+*.Rproj
 
 # produced vignettes
 vignettes/*.html
