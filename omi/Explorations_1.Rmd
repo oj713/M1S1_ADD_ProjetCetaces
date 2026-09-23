@@ -1,0 +1,69 @@
+---
+title: "Explorations_1"
+output: html_document
+---
+
+### Explorations 1
+
+Lire le jeux de données. Moi j'adore le logigiel dplyr ( pour la manipulation des dataframes) donc je vais l'utiliser
+
+```{r}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+  library(sf) # for working with spatial features, which is basically a dataframe with latitude/longitude explicity recognized
+  library(viridis) # color schemes
+})
+
+cetaces <- read.csv("../jeux_de_donnees/Cetaces_Transects.csv", sep= ";", dec=".", skip=1)
+#cetaces_sf <- st_as_sf(cetaces, coords=c("lon", "lat"), crs=4326)
+
+dplyr::glimpse(cetaces)
+```
+
+Représentation visuelle: où sont les centres des transects et combien d'effort représentent-ils ? 
+
+```{r}
+world_polygons <- map_data("world") # public dataset
+
+# X/Y bounds of the cetaces dataset, used to crop the figure
+xybounds <- list(
+  "x" = c(min(cetaces$lon), max(cetaces$lon)),
+  "y" = c(min(cetaces$lat), max(cetaces$lat))
+)
+
+ggplot() +
+  geom_polygon(data = world_polygons, aes(long, lat, group = group), fill = "lightgray", col = "gray") +
+  geom_point(data = cetaces, aes(x = lon, y = lat, size = effort_km), alpha = 0.5) +
+  facet_wrap(~saison) +
+  coord_sf(xlim = xybounds$x, ylim = xybounds$y, expand = TRUE) +
+  labs(title = "Transect centers weighted by effort, faceted by season", 
+       x = "Longitude", y = "Latitude", size = "Effort (km)") + 
+  theme_bw()
+
+```
+
+Les cétacés étaient-ils observés (normalisé pour l'effort) ? Quels types ? 
+
+```{r}
+cetaces <- cetaces |>
+  mutate(nb_groupes_obspareffort = nb_groupes_observes/effort_km,
+         presence = presence == 1) # incorrectly read in as a continuous variable when is boolean
+
+ggplot() +
+  geom_polygon(data = world_polygons, aes(long, lat, group = group), fill = "lightgray", col = "gray") +
+  geom_point(data = cetaces, aes(x = lon, y = lat, 
+                                 color = nb_groupes_obspareffort)) + # fade out absences a bit
+  scale_color_viridis(option = "viridis", direction = -1) + 
+  facet_wrap(~saison) +
+  coord_sf(xlim = xybounds$x, ylim = xybounds$y, expand = TRUE) +
+  labs(title = "Transect centers weighted by effort, faceted by season", 
+       x = "Longitude", y = "Latitude", color = "Number of groups observed per km effort") + 
+  theme_bw()
+
+```
+
+
+
+
+
