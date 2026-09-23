@@ -93,7 +93,7 @@ Ces commandes sont présentées en un ordre qui corrépond à un flux de travail
 
 ### Merge Conflicts
 
-Le point fort de git est sa capacité de gérer les "merge conflicts": quand il y a deux différents changements proposées pour le même morceau du code. 
+Le point fort de git est sa capacité de gérer les "merge conflicts": quand il y a deux différents changements proposés pour le même morceau du code. 
 
 Par exemple, considère cette scénario: 
 
@@ -101,7 +101,7 @@ Par exemple, considère cette scénario:
 
 2) Dans le fichier "README.md", je modifie le titre d'être "Omi est hyper cool." Je fais un commit et je le push à l'origine à 10h45.
 
-3) Emile prends son temps avec d'autre travail, mais il modifie aussi le titre du README.md à "Emile est stylé." Il fait lui aussi un commit à 11h30, mais quand il essaie de push à l'origine il va recevoir une erreur. Puis il n'a pas fait un pull depuis mon changement, il y a maintenant deux différents changements au même ligne de code !
+3) Emile prends son temps avec d'autre travail, mais il modifie aussi le titre du README.md à "Emile est stylé." Il fait lui aussi un commit à 11h30, mais quand il essaie de push à l'origine il va recevoir une erreur. Puisqu'il n'a pas fait un pull depuis mon changement, il y a maintenant deux différents changements au même ligne de code !
 
 En général, on veut éviter les merge conflicts au maximum !! C'est une nuisance de les gérer. Pour l'instant, la meilleur solution est de séparer notre travail: c'est à dire on travaille chacun dans notre propre sous-dossier et évite toute possibilité d'un merge conflict. On peut revisiter le sujet quand on commence à avoir les fichiers communs pour le code final (we'll cross that bridge when we get to it). Il existe beaucoup de ressources en ligne pour nous aider avec tout ça.
 
