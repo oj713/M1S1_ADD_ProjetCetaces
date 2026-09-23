@@ -89,7 +89,7 @@ Ces commandes sont présentées en un ordre qui corrépond à un flux de travail
 
 `git push origin main`
 
-* "Push" / charge ton commit vers l'origine. Il sera désormais intégré dans la version origine et tout le monde peut l'accéder.
+* "Push" / charge ton commit vers l'origine. Il sera désormais intégré dans la version origine et tout le monde peut l'accéder. *Il va falloir peut-être saissiser tes crédentiels GitHub*
 
 ### Merge Conflicts
 
