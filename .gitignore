@@ -1,5 +1,6 @@
 .DS_store
 README.html
+*.html
 
 # History files
 .Rhistory
