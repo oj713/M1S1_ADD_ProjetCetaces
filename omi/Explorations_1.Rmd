@@ -13,6 +13,7 @@ suppressPackageStartupMessages({
   library(ggplot2)
   library(sf) # for working with spatial features, which is basically a dataframe with latitude/longitude explicity recognized
   library(viridis) # color schemes
+  library(tidyr) # replace_na
 })
 
 cetaces <- read.csv("../jeux_de_donnees/Cetaces_Transects.csv", sep= ";", dec=".", skip=1)
@@ -63,7 +64,19 @@ ggplot() +
 
 ```
 
+```{r}
+cetaces_mod = cetaces |>
+  mutate(taille_groupe_moyenne = replace_na(taille_groupe_moyenne, 0), 
+    ind_per_effort = nb_groupes_observes * taille_groupe_moyenne / effort_km)
 
+ggplot(cetaces_mod, aes(chlorophylle_mgm3, ind_per_effort)) +
+  geom_point(alpha = .5) +
+  labs(x = "Chlorophylle (mg/m3)", y = "Individus par km effort") +
+  stat_smooth(method = "lm",
+              formula = y ~ x,
+              geom = "smooth")
+
+```
 
 
 
