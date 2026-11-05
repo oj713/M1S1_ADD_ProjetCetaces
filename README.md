@@ -65,6 +65,12 @@ Avant de commencer le tutoriel, crée un compte GitHub et communique-moi ton nom
 
 6. Vérifie que tu es connecté à l'origine: dans le terminal RStudio, avec le projet ouvert, tape `git remote -v`. Tu devrais voir deux URL. Si rien ne s'affiche, vérifie que t'es dans le bon dossier.
 
+### SSH Authentification
+
+Pour pouvoir envoyer tes commits vers l'origine, il faut vérifier ton identité. Pour faire cela il y a plusieurs options, mais la meilleure et la plus sécure est de créer une *clé SSH*. 
+
+Utiliser ce tutorial: [https://dev.to/kkibet/solving-git-authentication-failures-password-authentication-is-not-supported-error-n96](). Il faut exécuter ces commandes dans le terminal. Une fois cette étape est faite, l'authentification devient automatique.
+
 ### Les commandes essentielles de Git
 
 Prérequis: Ouvre le projet dans RStudio et clique sur l'onglet « terminal » en bas.
@@ -91,7 +97,7 @@ Ces commandes sont présentées dans l'ordre qui correspond à un flux de travai
 
 `git push origin main`
 
-* Faire un `push` / envoyer ton commit vers l'origine. Il sera désormais intégré à la version d'origine et tout le monde pourra y accéder. *Il faudra peut-être saisir tes identifiants GitHub.*
+* Faire un `push` / envoyer ton commit vers l'origine. Il sera désormais intégré à la version d'origine et tout le monde pourra y accéder. *Il faudra peut-être saisir ton mot de passe SSH.*
 
 ### Conflits de fusion ( Merge Conflicts )
 
