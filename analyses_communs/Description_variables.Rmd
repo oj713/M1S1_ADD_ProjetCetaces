@@ -1,0 +1,371 @@
+---
+title: "Description des variables du projet"
+output:
+  html_document:
+    toc: true
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(echo = F)
+
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(tidyverse)
+  library(viridis)
+})
+```
+
+
+# Contexte Scientifique
+
+*[Fourni dans le jeux de données]*
+
+Le golfe de Gascogne abrite une communauté de cétacés parmi les plus diversifiées d'Europe :
+dauphins communs sur le plateau, globicéphales et rorquals sur le talus, cachalots dans les canyons
+profonds. Ces animaux ne sont pas répartis au hasard : ils suivent la ressource, elle-même
+concentrée là où la topographie force la remontée d'eaux riches — talus continental, têtes de
+canyons.
+
+Recenser ces populations pose un problème méthodologique classique : on ne compte jamais les animaux
+présents, seulement ceux que l'on a vus. Un transect long donne plus d'observations qu'un transect
+court, et une mer agitée en fait manquer beaucoup. L'analyse doit donc démêler l'abondance réelle de
+l'effort et des conditions d'observation.
+
+Ce jeu rassemble 540 transects d'observation réalisés en bateau entre 43 et 52 °N, du plateau
+continental à la plaine abyssale, sur les quatre saisons.
+
+Le fichier 05_cetaces.gpkg contient les 540 transects sous forme de points (le point représente le
+centre du transect), en WGS84 (EPSG:4326). L'emprise couvre environ 1 000 km de diagonale, du
+plateau armoricain à la plaine abyssale du golfe.
+
+Les transects ne sont pas répartis uniformément : la campagne a concentré son effort là où les
+observations étaient attendues. La colonne id permet de rejoindre le tableau CSV et la couche.
+
+```{r loadDataset, echo = TRUE}
+cetaces <- read.table("../jeux_de_donnees/Cetaces_Transects.csv", header = TRUE, sep = ";", dec = ".", comment.char = "#") |>
+  mutate(across(c(secteur, saison, etat_mer_beaufort), as.factor), 
+         presence = presence == 1)
+
+dplyr::glimpse(cetaces)
+```
+
+# Les Variables
+
+*[Informations fournies dans le jeux de données]* Le tableau contient les variables suivantes. Le type de chaque variable n'est volontairement pas précisé : l'identifier, et en tirer les conséquences pour le choix de vos analyses, fait partie du
+travail demandé.
+
+```{r helperFunctions}
+world_polygons <- map_data("world") # jeux de données publiques
+
+# X/Y limites de jeux de données, utilisé pour récadrer la figure
+xybounds <- list(
+  "x" = c(min(cetaces$lon), max(cetaces$lon)),
+  "y" = c(min(cetaces$lat), max(cetaces$lat))
+)
+
+#' Base de la visualisation des variables
+plot_gen <- function() {
+  ggplot(data = cetaces, aes(x = lon, y = lat)) +
+    geom_polygon(data = world_polygons, aes(long, lat, group = group), fill = "lightgray", col = "gray") +
+    coord_sf(xlim = xybounds$x, ylim = xybounds$y, expand = TRUE) +
+    xlab("Longitude") + ylab("Latitude") + 
+    theme_bw()
+}
+
+#' Retrieves a summary for a factorial variable
+#' @param var string, the factorial variable to summarize
+summarize_factorial <- function(var) {
+  # !!var := sert à regler le nom de la colonne au valeur du var plutot que "var"
+  d <- count(cetaces, !!var := get(var)) 
+  d |> mutate(proportion = n / sum(n)) |> knitr::kable(format="markdown")
+}
+
+
+#' Retrieves a summary for numeric variable(s)
+#' @param ... str, numeric variable(s) to summarize
+summarize_numeric <- function(...) {
+  vars <- c(...)
+
+  cetaces |>
+    dplyr::summarise(
+      dplyr::across( dplyr::all_of(vars), # where(is.numeric) pour faire tout
+        list(
+          min = ~ min(.x, na.rm = TRUE),
+          median = ~ median(.x, na.rm = TRUE),
+          mean = ~ mean(.x, na.rm = TRUE),
+          stdev = ~ sd(.x, na.rm = TRUE),
+          q25 = ~ quantile(.x, 0.25, na.rm = TRUE),
+          q75 = ~ quantile(.x, 0.75, na.rm = TRUE),
+          max = ~ max(.x, na.rm = TRUE)
+        )
+      )
+    ) |>
+    pivot_longer(everything(), 
+                 names_pattern = "^(.*)_(min|median|mean|stdev|q25|q75|max)$",
+                 names_to=c('variable', '.value')) |>
+    knitr::kable(format = "markdown")
+}
+```
+
+## Détails d'échantillonage
+
+### Coordonnées
+
+**Signification**: Donnent le centre du transect traversé. 
+
+**Type**: Coordonnées, quantitative continu
+
+**Unités**: Dégrés décimaux, WGS84, EPSG:4326
+
+**Éventail**: -9.646 à -1.305 °N, 43.330 à 50.286 °E
+
+```{r}
+summarize_numeric("lat", "lon")
+```
+
+### Saison
+
+`cetaces$saison`
+
+**Signification**: La saison de l'observation.
+
+**Type**: Facteur à quatre niveaux. Hiver, Printemps, Ete, Automne. Qualitative nominale.
+
+**Unités**: N/A
+
+```{r saison}
+plot_gen() +
+  geom_point() + 
+  facet_wrap(~saison) +
+  labs(title = "Saison")
+```
+
+### Effort d'échantillonage
+
+`cetaces$effort_km`
+
+**Signification**: Le longueur du transect parcouru en veille.
+
+**Type**: Quantitative continu
+
+**Unités**: kilomètres
+
+```{r}
+summarize_numeric("effort_km")
+
+plot_gen() + 
+  geom_point(aes(col = effort_km)) +
+  labs(col = NULL, title = "Effort d'échantillonage (km)") +
+  scale_color_viridis(direction = -1)
+```
+## État de mer
+
+`cetaces$etat_mer_beaufort`
+
+**Signification**: L'état de la mer pendant l'observation selon [l'échelle de Beaufort](https://www.station-meteo.com/outils/echelle-beaufort).
+
+**Type**: Facteur à sept niveaux, 0-6. Calme (vitesse du vent < 1 km/h) à vent frais (39-49 km/h). Qualitative ordinale. 
+
+**Unités**: Le niveau du facteur corréspond à une vitesse du vent en km/h.
+
+```{r etat_mer_beaufort}
+summarize_factorial("etat_mer_beaufort")
+
+plot_gen() +
+  geom_point(aes(col = etat_mer_beaufort)) + 
+  labs(title = "État de mer selon l'échelle de Beaufort", col=NULL) + 
+  scale_color_viridis_d(option = "cividis", direction = -1)
+```
+
+### ID
+
+`cetaces$id`
+
+**Signification**: L'identifiant du transect. Il sert à joindre le tableau à la couche géographique pour les couches SIG.
+
+**Type**: String du format "CET_XXXX", ou XXXX varie entre 0001 à 0540. Qualitative nominale.
+
+**Unités**: N/A
+
+
+## Contexte Environnementale
+
+### Secteur
+
+`cetaces$secteur`
+
+**Signification**: Le secteur bathymétrique du transect, i.e. le terrain au fond.
+
+**Type**: Facteur à quatre niveaux. Plateau, Talus, Canyon, Plaine abyssale.
+
+**Unités**: N/A
+
+```{r secteur}
+summarize_factorial("secteur")
+
+plot_gen() +
+  geom_point(aes(col = secteur)) + 
+  labs(col = NULL, title = "Secteur")
+```
+
+### Profondeur
+
+`cetaces$profondeur_m`
+
+**Signification**: Le profondeur moyenne le long du transect.
+
+**Type**: Quantitative continu
+
+**Unités**: mètres
+
+```{r profondeur_m}
+summarize_numeric("profondeur_m")
+
+plot_gen() + 
+  geom_point(aes(col = profondeur_m)) +
+  labs(col = "mètres", title = "Profondeur") +
+  scale_color_viridis(option = "turbo", direction = -1)
+```
+
+### Distance à la côte
+
+`cetaces$distance_cote_km`
+
+**Signification**: La distance à la côte (on présume depuis le centre du transect)
+
+**Type**: Quantitative continu
+
+**Unités**: kilomètres
+
+```{r distance_cote_km}
+summarize_numeric("distance_cote_km")
+
+plot_gen() + 
+  geom_point(aes(col = distance_cote_km)) +
+  labs(col = "km", title = "Distance à la côte") +
+  scale_color_viridis(direction = -1)
+```
+
+### SST
+
+`cetaces$sst_c`
+
+**Signification**: La température de surface de la mer. Pas spécifié s'il s'agit de température de la moyenne du transect ou du point centre.
+
+**Type**: Quantitative continu
+
+**Unités**: °C
+
+```{r sst_c}
+summarize_numeric("sst_c")
+
+plot_gen() + 
+  geom_point(aes(col = sst_c)) +
+  labs(col = "°C", title = "Température de surface de la mer") +
+  scale_color_viridis(option = "inferno", direction = -1)
+```
+
+### Chlorophylle
+
+`cetaces$chlorophylle_mgm3`
+
+**Signification**: La concentration en chlorophylle. Pas spécifié s'il s'agit de la chlorophylle moyenne ou au point centre.
+
+**Type**: Quantitative continu
+
+**Unités**: mg/m³
+
+```{r chlorophylle_mgm3}
+summarize_numeric("chlorophylle_mgm3")
+
+plot_gen() + 
+  geom_point(aes(col = chlorophylle_mgm3)) +
+  labs(col = "mg/m³", title = "Chlorophylle") +
+  scale_color_viridis(option = "mako", direction = -1)
+```
+
+## Variables d'Observation des Cétacés
+
+### Presence
+
+`cetaces$presence`
+
+**Signification**: Si au moins un groupe a été observé sur le transect. *Notez bien qu'on spécifie "observé", une "absence" ne veut forcement pas dire qu'il n'y avait pas des cétacés!*
+
+**Type**: Boolean (à partir de 0/1)
+
+**Unités**: N/A
+
+```{r presence}
+summarize_factorial("presence")
+
+plot_gen() +
+  geom_point(aes(col = presence)) + 
+  facet_wrap(~ presence) +
+  theme(legend.position = "none") +
+  labs(title = "Cétacés observés", col=NULL)
+```
+
+### Nombre de groupes observés
+
+`cetaces$nb_groupes_observes`
+
+**Signification**: Le nombre de groupes de cétacés détectés sur le transect
+
+**Type**: Quantitative discrète
+
+**Unités**: groupes
+
+```{r nb_groupes_observes}
+summarize_numeric("nb_groupes_observes")
+
+plot_gen() + 
+  geom_point(aes(col = nb_groupes_observes), alpha = .7) +
+  labs(col = NULL, title = "Nombre de groupes observés") +
+  scale_color_viridis(option = "viridis", direction = -1)
+```
+### Taille moyenne des groupes
+
+`cetaces$taille_groupe_moyenne`
+
+**Signification**: La taille moyenne (i.e. nombre d'individus) des groupes observés le long d'un transect. Renseigné uniquement si au moins un groupe a été vu.
+
+**Type**: Quantitative continu
+
+**Unités**: individus
+
+```{r taille_groupe_moyenne}
+summarize_numeric("taille_groupe_moyenne")
+
+tailles_moyennes <- cetaces |> na.omit()
+ggplot(data = tailles_moyennes, aes(x = lon, y = lat)) +
+    geom_polygon(data = world_polygons, aes(long, lat, group = group), fill = "lightgray", col = "gray") +
+    coord_sf(xlim = xybounds$x, ylim = xybounds$y, expand = TRUE) +
+    xlab("Longitude") + ylab("Latitude") + 
+    theme_bw() + 
+    geom_point(aes(col = taille_groupe_moyenne)) +
+    labs(col = NULL, title = paste0("Taille moyenne des groupes (n = ", tailles_moyennes |> nrow(), ")")) +
+    scale_color_viridis(option = "viridis", direction = -1)
+```
+
+### Espèce Dominante
+
+`cetaces$espece_dominante`
+
+**Signification**: L'espèce dominante observée sur le transect (ou "aucune").
+
+**Type**: Facteur à cinq niveaux. Aucune, Dauphin commun,
+  Globicephale, Rorqual commun, Cachalot. Qualitative Nominale.
+
+**Unités**: N/A
+
+```{r espece_dominante}
+summarize_factorial("espece_dominante")
+
+plot_gen() +
+  geom_point(aes(col = espece_dominante)) + 
+  facet_wrap(~espece_dominante) +
+  theme(legend.position = "none") +
+  labs(title = "Espèce Dominante", col=NULL)
+```
+
