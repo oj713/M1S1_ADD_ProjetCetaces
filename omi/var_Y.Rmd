@@ -1,0 +1,138 @@
+---
+title: "Thoughts on independent variables"
+output: 
+  html_document:
+    toc: true
+---
+
+So in terms of "y variables", we have three measures: 
+
+* cétacés observés
+* nombre de groupes observés
+* taille moyenne des groupes
+* espèce principal
+
+and we have two contributing variables: 
+
+* état de mer
+* effort d'échantillonage
+
+this file is going to try and understand the relationship between these variables and how to best conceptualize our target variables.
+
+```{r}
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(tidyverse)
+  library(viridis)
+  library(ggpubr)
+})
+
+cetaces <- read.table("../jeux_de_donnees/Cetaces_Transects.csv", header = TRUE, sep = ";", dec = ".", comment.char = "#") |>
+  mutate(across(c(secteur, saison, etat_mer_beaufort), as.factor), 
+         presence = presence == 1)
+```
+
+# Effects of Confounding variables
+
+## Effet of effort d'échantillonage
+
+### Presence vs. Sampling Effort
+
+It seems likely that there is a significant effect of sampling effort on observed cétacés and/or number of groups observed. 
+
+```{r}
+pbox <- ggplot(cetaces, aes(x=nb_groupes_observes, y=effort_km, group = nb_groupes_observes)) + 
+  geom_boxplot()
+pscatter <- ggplot(cetaces, aes(x=nb_groupes_observes, y=effort_km)) + 
+  geom_point(alpha = 0.5)
+
+ggarrange(pscatter, pbox, ncol=2)
+```
+
+To start, is there a significant difference in effort_km between presence and absence ? 
+
+```{r}
+ggplot(cetaces, aes(x = presence, y = effort_km, fill = presence, group = presence)) + geom_boxplot()
+
+# Get the same stats represented by the boxplot
+# cetaces |>
+#   group_by(presence) |>
+#   summarize(mean = mean(effort_km), sd = sd(effort_km))
+
+# ANOVA: means of effort_km are significantly different between presence = TRUE and presence = FALSE
+pa_vs_effort <- aov(effort_km ~ presence, data = cetaces)
+
+# Verify conditions of application
+# Homoscedascity of residuals : ACCEPTS
+bartlett.test(residuals(pa_vs_effort) ~ presence, data = cetaces)
+library(DescTools)
+# LeveneTest(effort_km ~ presence, data = cetaces, center = median)
+# Normality of residuals : REJECTS, however the shapiro test is known to be overly sensitive to sample sizes over a couple hundred
+shapiro.test(residuals(pa_vs_effort))
+# Do another check here…
+plot(pa_vs_effort, which = 2)
+hist(residuals(pa_vs_effort), breaks = 20)
+```
+Normality of residus isn't respected since the QQplot is lightly tailed. Given the large size of the dataset ANOVA is probably robust enough so that it doesnt matter, but to be safe we'll instead proceed with a Welch test.
+
+```{r}
+t.test(effort_km ~ presence, data = cetaces, var.equal = FALSE)
+```
+Thus we can conclude that effort_km is significantly different between presence = TRUE and presence = FALSE.
+
+### Number of groupes vs. Sampling Effort
+
+Now let's take a look at this at the level of the actual number of groups observed. My hypothesis is that there's a linear relationship.
+
+```{r}
+count(cetaces, nb_groupes_observes)
+```
+
+Some of the effectifs for the groups are 1 ! To avoid samples of size 1 i'm gonna reclass into groupes 0, 1-5, 5-10, 11-15, and 16-20
+
+```{r}
+count(cetaces, nb_groupes_observes)
+
+cetaces <- cetaces |>
+  mutate(amt_groupes_observes = cut(nb_groupes_observes,
+    breaks = c(0, 1, 5, 10, 15, 20),
+    labels = c("aucun", "1-5", "5-10", "11-15", "16-20")))
+
+count(cetaces, amt_groupes_observes)
+
+bartlett.test(effort_km ~ amt_groupes_observes, data = cetaces)
+```
+
+
+```{r}
+# Effect of sampling effort on number of groupes observed => GLM 
+effort_on_numgroupes <- glm(nb_groupes_observes ~ effort_km, data = cetaces, family = poisson)
+summary(effort_on_numgroupes)
+
+par(mfrow = c(2, 2))
+plot(effort_on_numgroupes)
+```
+there is some crazy weirdness with the diagnostic plots here
+
+
+
+# Relationship between mesured values
+
+## Relation between num groups & average size
+
+```{r}
+ggplot(cetaces |> na.omit(), aes(x=nb_groupes_observes, y = taille_groupe_moyenne)) + 
+  geom_point(alpha = 0.5) + 
+  labs(title = "Number of groupes observed vs. average size of groups")
+
+test <- aov(taille_groupe_moyenne ~ nb_groupes_observes, data = cetaces |> na.omit())
+summary(test)
+```
+The ANOVA shows that there is no significant relationship between the number of groupes observed on a transect versus the average size of said group.
+
+Just out of curiousity lets map out the top 10% abundance for the two
+
+```{r}
+
+```
+

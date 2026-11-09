@@ -76,6 +76,12 @@ ggplot(cetaces_mod, aes(chlorophylle_mgm3, ind_per_effort)) +
               formula = y ~ x,
               geom = "smooth")
 
+ggplot(cetaces_mod, aes(nb_groupes_observes, taille_groupe_moyenne)) +
+  geom_point(alpha = .5) +
+  stat_smooth(method = "lm",
+              formula = y ~ x,
+              geom = "smooth")
+
 ```
 
 
