@@ -1,0 +1,200 @@
+---
+title: "acp"
+output: html_document
+---
+
+```{r}
+#### Chargement des packages ade4 (pour faire l'analyse) et factoextra (pour visualiser les resultats)
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(ade4)
+  library(factoextra)
+  library(tidyverse)
+  library(viridis)
+  library(ggpubr)
+  library(rstatix)
+})
+
+cetaces <- read.table("../jeux_de_donnees/Cetaces_Transects.csv", header = TRUE, sep = ";", dec = ".", comment.char = "#") |>
+  mutate(across(c(secteur, saison, etat_mer_beaufort), as.factor), 
+         presence = presence == 1)
+```
+
+```{r}
+summary(cetaces)
+pairs(cetaces |> select(where(is.numeric)))
+```
+
+```{r, message = FALSE}
+library(GGally)
+cetaces_num <- cetaces |> select(where(is.numeric), -lon, -lat) |>
+  replace_na(list(taille_groupe_moyenne = 0))
+ggpairs(cetaces_num) # correlations 2 a 2
+```
+
+```{r}
+# Les donnees ne sont pas toutes de meme unite
+# On va alors les normaliser, en centrant/reduisant avec la fonction scale
+cetaces_scaled = scale(cetaces_num)
+
+#### Visualisation graphique des donnees TAB1 et TAB1norm
+par(mfrow=c(1,2)) # partitionne la fenetre graphique en 1 ligne, 2 colonnes
+boxplot(cetaces_num, las=2, main="TAB1") # l'argument las positionne l'etiquette perpendiculairement a l'axe
+boxplot(cetaces_scaled, las=2, main="TAB1norm")
+```
+
+
+```{r}
+# Matrice des covariances et des correlations sur les donnees centrees-reduites : 
+cor(cetaces_scaled)
+```
+
+```{r}
+VP = eigen(cor(cetaces_scaled))
+
+barplot(VP$values) # Graphique des eboulis, ou screeplot = graphique des valeurs propres
+# Droite a 1 (= moyenne des valeurs propres) sur le graphique
+abline(h=mean(VP$values)) # Critere de Kaiser
+
+CP = VP$values / sum(VP$values)
+CP # Proportions
+CP*100 # En % de variance expliquee
+cumsum(CP*100) # somme cumulee
+```
+
+
+```{r}
+#### La fonction dudi.pca (du package ade4, qui a deja ete charge pour travailler sur le jeu de donnees meau)
+par(mfrow=c(1,1))
+ACP = dudi.pca(df = cetaces_scaled, scannf = FALSE, nf = 3) #la fonction dudi.pca se charge de prendre la matrice de correlations
+
+ACP
+```
+
+Dans l'objet ACP sont stockes differents elements :
+ACP$eig # les valeurs propres
+ACP$li les nouvelles coordonnees des individus
+ACP$co les nouvelles coordonnees des variables (loading matrix)
+D'autres parametres sont presents, ils ne sont que peu ou pas utiles
+
+```{r}
+poids = ACP$eig/sum(ACP$eig) ; poids # part de variance expliquee par chaque valeur propre
+cumsum(poids) # somme cumulee
+```
+
+```{r}
+# la fonction summary sur l'objet ACP permet d'obtenir ces informations
+summary(ACP)
+```
+
+```{r}
+#Le graphique des valeurs propres (des eboulis) peut etre obtenu avec la fonction fviz_eig
+fviz_eig(ACP)
+```
+
+so according to the internet this scree plot is fucked up and bad
+https://communities.sas.com/t5/SAS-Communities-Library/How-many-principal-components-should-I-keep-Part-1-common/ta-p/948949
+bruh
+
+
+
+```{r}
+#### Cercles des correlations
+fviz_pca_var(ACP, repel=TRUE) # par defaut, le graphe est realise sur les axes 1 et 2
+fviz_pca_var(ACP, axes=c(1,3), repel=TRUE) # Composantes 1 et 3
+fviz_pca_var(ACP, axes=c(2,3), repel=TRUE) # Composantes 2 et 3
+```
+
+
+```{r}
+## Resultats sur les variables actives
+var = get_pca_var(ACP)
+var
+var$coord # coordonnees des variables sur chaque axe
+```
+
+```{r}
+#### Association entre individus
+# on represente les individus dans les composantes avec la fonction fviz_pca_ind :
+fviz_pca_ind(ACP, repel=TRUE) # Composantes 1 et 2 par defaut
+fviz_pca_ind(ACP, axes=c(1,3), repel=TRUE) # Composantes 1 et 3
+fviz_pca_ind(ACP, axes=c(2,3), repel=TRUE) # Composantes 2 et 3
+```
+
+Si on peut classer les individus selon un facteur, l'interpretation est facilitee.
+ici, on peut mettre les SAISONS ET/OU ESPECE comme facteur d'interpretation.
+#Elles sont dans le design du jeu de donnees "meau"
+Saisons = meau$design$season
+Saisons
+
+```{r}
+fviz_pca_ind(ACP,
+             col.ind = cetaces$espece_dominante,
+             axes=c(1,3),
+             repel=TRUE,
+             palette=c(1:5),
+             addEllipses = TRUE,
+             ellipse.type = "convex",
+             legend.title = "Espece")
+
+fviz_pca_ind(ACP,
+             col.ind = cetaces$saison,
+             axes=c(1,3),
+             repel=TRUE,
+             palette=c(1:4),
+             addEllipses = TRUE,
+             ellipse.type = "convex",
+             legend.title = "Espece")
+```
+
+
+```{r}
+### Rotation Varimax
+ACP.rot <- ACP
+ACP.rot[["co"]] <- varimax(as.matrix(ACP.rot$co))$loadings
+fviz_pca_var(ACP, axes=c(2,3), repel=TRUE) # sans rotation
+fviz_pca_var(ACP.rot, axes=c(2,3), repel=TRUE) # avec rotation
+```
+# BY SPECIES
+
+```{r}
+ACP_for_species <- function(species) {
+  spec <- cetaces |>
+    filter(espece_dominante == species)
+  
+  spec_scaled <- spec |>
+    select(where(is.numeric), -lon, -lat) |>
+    scale()
+  
+  VP = eigen(cor(spec_scaled))$values
+  nf = min(which(VP < 1), 3)
+  
+  if (nrow(spec) == 0) {stop("No entries")}
+  
+  ACP = dudi.pca(df = spec_scaled, scannf = FALSE, nf = nf)
+  
+  list("ACP" = ACP,
+       "vecteurs principales" = VP,
+       "nf" = nf,
+       "vars" = get_pca_var(ACP)$coord,
+       "scree" = fviz_eig(ACP, title = paste(species, "scree plot")),
+       "plot" = fviz_pca_var(ACP, axes=c(1,2), repel=TRUE, title = paste(species, "biplot")),
+       "indplot" = fviz_pca_ind(
+          ACP,
+          col.ind = spec$saison,
+          axes=c(1,3),
+          repel=TRUE,
+          palette=c(1:4),
+          addEllipses = TRUE,
+          ellipse.type = "convex",
+          legend.title = "Saison",
+          title = paste(species, "ind plot"))) 
+}
+
+list_especes <- (cetaces |> na.omit())$espece_dominante |> unique()
+res <- list_especes |> lapply(ACP_for_species) |> setNames(list_especes)
+
+res
+```
+
+

@@ -25,6 +25,7 @@ suppressPackageStartupMessages({
   library(tidyverse)
   library(viridis)
   library(ggpubr)
+  library(rstatix)
 })
 
 cetaces <- read.table("../jeux_de_donnees/Cetaces_Transects.csv", header = TRUE, sep = ";", dec = ".", comment.char = "#") |>
@@ -88,51 +89,148 @@ Now let's take a look at this at the level of the actual number of groups observ
 count(cetaces, nb_groupes_observes)
 ```
 
-Some of the effectifs for the groups are 1 ! To avoid samples of size 1 i'm gonna reclass into groupes 0, 1-5, 5-10, 11-15, and 16-20
+To note, some of the effectifs are 1 here. If we wanted to use ANOVA, while it is robust to different effectifs the small sizes would negatively impact variance. Might be worth thinking about reclassification. 
+
+For the moment, since we're working with a count variable we'll start with a Poisson regression.
 
 ```{r}
-count(cetaces, nb_groupes_observes)
+res <- glm(nb_groupes_observes ~ effort_km, data = cetaces |> filter(presence), family = poisson(link = "log"))
 
+summary(res)
+
+deviance(res) / df.residual(res)
+```
+Since there is significant overdispersion, the Poisson regression here isn't suitable (assumes variance(Y) = mean(Y). Let's try the negative binomial… [link](https://utstat.utoronto.ca/reid/sta2201s/QUASI-POISSON.pdf)
+
+```{r}
+res <- MASS::glm.nb(nb_groupes_observes ~ effort_km, data = cetaces |> filter(presence))
+
+summary(res)
+
+plottable_res <- data.frame(effort_km = seq(from=min(cetaces$effort_km), to=max(cetaces$effort_km), length.out = 100))
+plottable_res$predicted <- predict(res, plottable_res, type = "response")
+
+ggplot(cetaces, aes(x = effort_km, y = nb_groupes_observes)) + 
+  geom_point() + 
+  geom_line(data = plottable_res, aes(x = effort_km, y = predicted), col = "red")
+```
+Looks like the GLM can't really say much of anything. Let's instead return to the reclassification & run an ANOVA to see if effort_km varies significantly between size classes. 
+
+For post-hoc with Welch I'm using (Games Howell)[https://statisticsbyjim.com/anova/welchs-anova-compared-to-classic-one-way-anova/]
+
+```{r}
 cetaces <- cetaces |>
-  mutate(amt_groupes_observes = cut(nb_groupes_observes,
-    breaks = c(0, 1, 5, 10, 15, 20),
-    labels = c("aucun", "1-5", "5-10", "11-15", "16-20")))
+  mutate(amt_groupes = cut(nb_groupes_observes, 
+                           breaks = c(-1, 0, 2, 5, 10, 20), 
+                           labels = c("0", "1-2", "3-5", "6-10", "11+")))
 
-count(cetaces, amt_groupes_observes)
+count(cetaces, amt_groupes)
 
-bartlett.test(effort_km ~ amt_groupes_observes, data = cetaces)
+ggplot(cetaces, aes(x=amt_groupes, y=effort_km, group = amt_groupes)) + 
+  geom_boxplot()
+
+# Traditional anova doesn't meet the condition of normality of residuals for the same reasons as the effort_km~presence
+oneway.test(effort_km~amt_groupes, data= cetaces, var.equal=FALSE)
+
+# Do pairwise comparisons using the Wilcox Test and Holm Correction
+games_howell_test(
+  cetaces,
+  effort_km ~ amt_groupes
+)
 ```
-
-
-```{r}
-# Effect of sampling effort on number of groupes observed => GLM 
-effort_on_numgroupes <- glm(nb_groupes_observes ~ effort_km, data = cetaces, family = poisson)
-summary(effort_on_numgroupes)
-
-par(mfrow = c(2, 2))
-plot(effort_on_numgroupes)
-```
-there is some crazy weirdness with the diagnostic plots here
-
-
+All groups except are significantly different than no observation. There is a small difference between 1-2 and 6-10. While the plot seems to suggest a correlation between more individuals observed and increased effort, we can't say much more than that effort_km is significantly higher for those samples with higher effort_km.
 
 # Relationship between mesured values
 
 ## Relation between num groups & average size
 
 ```{r}
-ggplot(cetaces |> na.omit(), aes(x=nb_groupes_observes, y = taille_groupe_moyenne)) + 
-  geom_point(alpha = 0.5) + 
-  labs(title = "Number of groupes observed vs. average size of groups")
+cetaces_observed <- cetaces |> filter(presence)
 
-test <- aov(taille_groupe_moyenne ~ nb_groupes_observes, data = cetaces |> na.omit())
-summary(test)
+# Plots
+pscatter <- ggplot(cetaces_observed, aes(x=nb_groupes_observes, y = taille_groupe_moyenne)) + 
+  geom_point(alpha = 0.5)
+pbox <- ggplot(cetaces_observed, aes(x = amt_groupes, y = taille_groupe_moyenne, group = amt_groupes)) +
+  geom_boxplot()
+ggarrange(pscatter, pbox, ncol=2)
+
+# ANOVA? 
+test <- aov(taille_groupe_moyenne ~ amt_groupes, data = cetaces_observed)
+# Homogeneity fails
+bartlett.test(residuals(test) ~ amt_groupes, data = cetaces_observed)
+# Normality fails
+shapiro.test(residuals(test))
+# QQ plot shows strong tail
+plot(test, which = 2)
+
+# Instead proceed with Welch
+oneway.test(taille_groupe_moyenne~amt_groupes, data= cetaces_observed, var.equal=FALSE)
+# Significant result ! at least one group is different from the others…
+pairwise.wilcox.test(
+  cetaces_observed$taille_groupe_moyenne,
+  cetaces_observed$amt_groupes,
+  p.adjust.method = "holm",
+  exact = FALSE
+)
+
+games_howell_test(
+  cetaces_observed,
+  taille_groupe_moyenne ~ amt_groupes
+)
 ```
-The ANOVA shows that there is no significant relationship between the number of groupes observed on a transect versus the average size of said group.
+These results show that there's a significant difference between the number of groupes observed on a transect vs the average size of the group, but the pairwise tests than go on to show that this is only significantly different between 1-2 and 3-5. I would be cautious here and say that there isn't really a relation.
 
-Just out of curiousity lets map out the top 10% abundance for the two
+Just out of curiosity lets map out the top 10% for each type
 
 ```{r}
+color_levels = c("Neither", "Top 10% Size", "Top 10% Group", "Both")
 
+top10s <- cetaces_observed |>
+  mutate(top_10p_taille = quantile(taille_groupe_moyenne, 0.9) < taille_groupe_moyenne,
+         top_10p_groupes = quantile(nb_groupes_observes, 0.9) < nb_groupes_observes,
+         type = paste(top_10p_groupes, top_10p_taille) |> recode_values(
+           from = c("FALSE FALSE", "FALSE TRUE", "TRUE FALSE", "TRUE TRUE"),
+           to = color_levels
+         ) |> factor(levels = color_levels))
+
+xybounds <- list(
+  "x" = c(min(cetaces$lon), max(cetaces$lon)),
+  "y" = c(min(cetaces$lat), max(cetaces$lat))
+)
+
+ggplot(top10s, aes(lon, lat, col = type)) +
+  geom_polygon(data = map_data("world"), aes(long, lat, group = group), fill = "lightgray", col = "gray") +
+  geom_point(alpha = 0.7) +
+  scale_color_manual(values = c("grey", "red", "blue", "purple")) +
+  coord_sf(xlim = xybounds$x, ylim = xybounds$y, expand = TRUE) +
+  theme_bw() + 
+  labs(title = "Top 10% of Average Group Size and # Groups")
 ```
+
+### ANCOVA of all confounding effets
+
+```{r}
+cetaces <- cetaces |>
+  mutate(num_ind = ifelse(nb_groupes_observes == 0, nb_groupes_observes, nb_groupes_observes * taille_groupe_moyenne))
+```
+
+
+```{r}
+reg <- lm(num_ind ~ effort_km + etat_mer_beaufort + espece_dominante, data = cetaces)
+
+summary(reg)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
